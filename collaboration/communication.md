@@ -44,7 +44,7 @@
 | ----------- | :----: | :-----: | :-------: | :------: | :----: | :------: | :----: |
 | **Ahmed** | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
 | **Charm** | 11AM-2PM | 11AM-2PM | 11AM-2PM | 11AM-2PM | 11AM-2PM | 11AM-2PM | 11AM-2PM |
-| **Dadi** | 11PM-3AM | 11PM-3AM | 11PM-3AM | 11PM-3AM | 11PM-3AM | 11PM-3AM | 11PM-3AM |
+| **Dadi** | 11AM-3PM | 11AM-3PM | 11AM-3PM | 11AM-3PM | 11AM-3PM | 11AM-3PM | 11AM-3PM |
 | **Hassan** | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM |
 | **Madiha** | 10AM-2PM | 10AM-2PM | 10AM-2PM | 10AM-2PM | 10AM-2PM | 8AM-1PM | 8AM-1PM |
 | **Saleem** | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM | 11AM-1PM |
