@@ -48,7 +48,7 @@ jobs:
           pip install pylint
         shell: bash
       - name: Python - Check Linting - pylint
-        run: "pylint solutions tests  || echo '::warning title=Pylint Error(s)::Discuss solutions and trade-offs in code review.'"
+        run: "pylint **/*.py --ignore-paths=env,venv,.env,.venv,__pycache__,.git  || echo '::warning title=Pylint Error(s)::Discuss solutions and trade-offs in code review.'"
         shell: bash
 
   py_tests:
