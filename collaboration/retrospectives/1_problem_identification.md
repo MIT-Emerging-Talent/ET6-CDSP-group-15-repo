@@ -76,7 +76,7 @@ tasks upfront, and being more time-conscious as a team.
 
 > to be added
 
-**Ahmed Khalifa**
+### Ahmed Khalifa
 
 > to be added
 
