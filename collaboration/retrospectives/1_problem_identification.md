@@ -60,24 +60,30 @@ tasks upfront, and being more time-conscious as a team.
 
 **Name:**
 
-**Madiha Malik**  
+### Madiha Malikzada
+>
 > I learned how important early planning and role clarity is in group research.
 > We had a strong process and alignment, but since we didn’t begin task
 > execution early enough, we faced time pressure at the end. For future
 > milestones, I’ll make sure we distribute work earlier, communicate clearly,
 > and review our timeline often to avoid the same issues.
 
-**Noorelsalam Almakki**
+### Noorelsalam Almakki
+
 > to be added
 
-**Dadi**
+### Dadi
+
 > to be added
 
 **Ahmed Khalifa**
+
 > to be added
 
-**Myat Charm**
+### Myat Charm
+
 > to be added
 
-**Al-hassen Sabeeh**
+### Al-hassen Sabeeh
+
 > to be added
