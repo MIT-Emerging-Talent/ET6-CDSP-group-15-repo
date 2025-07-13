@@ -102,7 +102,7 @@ limitations.
 
 ## 6. sce-household-spending-chart-data.xlsx
 
-* **Source:** This file likely comes from the Federal Reserve Bank of New York
+* **Source:** This file comes from the Federal Reserve Bank of New York
     (FRBNY) Survey of Consumer Expectations (SCE), specifically data used for charts
     related to household spending.
   * **Source:** [https://www.newyorkfed.org/microeconomics/sce/](https://www.newyorkfed.org/microeconomics/sce/)
@@ -118,3 +118,32 @@ limitations.
     usable for predictive modeling at an individual level. It can provide valuable
     contextual information and trends.
 * **Known Limitations:** Aggregated data limits its use for granular analysis.
+
+## 7. Loan Default Prediction Dataset (from Nikhil1e9)
+
+* **Source:** [Loan Default Prediction Dataset (Kaggle)](https://www.kaggle.com/datasets/nikhil1e9/loan-default)
+* **Description:** This dataset, sourced from a Coursera Loan Default Prediction
+   Challenge, contains 255,347 rows and 18 columns. It includes various features
+ such as age, income, credit score, and employment details, along with a target
+ variable indicating whether an individual defaulted on a loan payment
+ It is designed for machine learning tasks to predict high-risk individuals
+ for loan defaults.
+* **Relevance:** High. Directly relevant to the research question, providing
+ a comprehensive set of demographic and financial behavioral features for
+ predicting loan default likelihood.
+* **Known Limitations:** The dataset is large and will require thorough review.
+
+## 8. Loan Default Dataset (from YasserH)
+
+* **Source:** [Loan Default Dataset (Kaggle)](https://www.kaggle.com/datasets/yasserh/loan-default-dataset)
+* **Description:** This dataset focuses on the loan default classification problem,
+ aiming to help banks predict whether a new borrower is likely to default. It
+ is a
+ large dataset with multiple deterministic factors like borrower's income, gender,
+ and loan purpose. The dataset may contain multicollinearity and empty values,
+ requiring cleaning and preprocessing.
+* **Relevance:** High. Directly relevant to the research question, offering a
+ rich set of features for building classification models to predict loan defaulters.
+* **Known Limitations:** The dataset is described as having strong multicollinearity
+ and empty values, which will necessitate significant data cleaning and preprocessing
+ before use.
