@@ -6,8 +6,8 @@ in P2P lending systems.
 ## Dataset: `accepted_2007_to_2018Q4.csv`
 
 **Description:**  
-This dataset contains detailed loan-level data from LendingClub for all accepted
-loan applications between 2007 and Q4 2018. It includes borrower information,  
+This dataset contains detailed loan-level data from LendingClub for all
+accepted loan applications between 2007 and Q4 2018. It includes borrower information,
 loan terms, interest rates, installment amounts, FICO scores, employment
 details,  
 credit history, and final loan statuses (e.g., Fully Paid, Charged Off, etc.).
@@ -24,9 +24,8 @@ Key fields include:
 
 FICO scores are available only for accepted loans.  
 Fields like `int_rate` and `revol_util` have been cleaned (percent symbols
-removed,
-converted to float). The data also retains the `url` field as of 2018 Q2 for  
-record traceability.
+removed, converted to float). The data also retains the `url` field as of 2018
+Q2 for record traceability.
 
 **Why We Need It:**  
 This is our **primary dataset** for modeling loan default risk in P2P lending.  
