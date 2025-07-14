@@ -35,7 +35,9 @@ in borrower behavior and platform-level trends in loan performance.
 
 **Source and Notes:**  
 Originally sourced and preprocessed by the Kaggle contributor  
-[Wordsforthewise](https://www.kaggle.com/datasets/wordsforthewise/lending-club)  
+Wordsforthewise:
+<https://www.kaggle.com/datasets/wordsforthewise/lending-club>
+
 with supporting code available at:  
 <https://github.com/nateGeorge/preprocess_lending_club_data>
 
