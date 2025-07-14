@@ -1,149 +1,167 @@
-# Raw Data Documentation
+# Deprecated Datasets – No Longer in Use
 
-Detailed documentation for the raw data files stored in the
-`1_datasets/raw_data/` directory of the DataCents project. Each entry includes
-information about the file's origin, content, and any known characteristics or
-limitations.
+These datasets were collected during our original BNPL-focused research
+question. They are not relevant to the updated research question on
+Peer-to-Peer (P2P) Lending systems.
 
-## 1. BNPL Intention to use.xlsx
+---
 
-* **Source:** [Dataset on Buy-Now-Pay-Later Adoption (Mendeley)](https://data.mendeley.com/datasets/8kj2rn7m9x/1)
-* **Description:** This Excel file contains survey responses from 226 shoppers to
-    understand their intention to adopt Buy Now Pay Later services. It includes
-    demographic information and variables related to factors influencing BNPL
-    adoption. This dataset is associated with a published academic study.
-* **Relevance:** High. Provides insights into the characteristics and behaviors of
-    BNPL users, which can be valuable for understanding the target demographic for
-    over-indebtedness prediction.
-* **Known Limitations:** Small sample size (226 respondents), focus on adoption
-    rather than direct default data, and convenience sampling from young
-    shoppers in
-    India may limit generalizability to a broader population.
+## Main Datasets
 
-## 2. BNPL.csv
+### Dataset: `BNPL.csv`
 
-* **Source:** [BNPL Ethical Risk Synthetic Data (Kaggle)](https://www.kaggle.com/datasets/vangelistsiligiris/bnpl-ethical-risk-synthetic-data)
-* **Description:** This CSV file is a synthetic dataset consisting of 1000 customer
-    records of BNPL profiles. It is designed to facilitate analysis around the
-    classification of ethical risk in BNPL. It contains demographic and
-    financial behavior features of BNPL users.
-* **Relevance:** High. Useful for exploring potential relationships between features
-    and risk in the BNPL context and for initial model development and testing.
-* **Known Limitations:** As a synthetic dataset, it does not reflect real-world
-    complexities and may not accurately represent actual user behavior or default
-    patterns. Findings derived solely from this dataset may not be
-    generalizable to real-world scenarios.
+**Description:** Survey data on BNPL usage, indebtedness, and financial
+stress among consumers.  
+**Why Deprecated:** Focused on BNPL user behavior, not related to P2P
+lending.  
+**Source:**  
+<https://www.kaggle.com/datasets/bdoey1/bnpl-data-v1>
 
-## 3. FRBNY-SCE-Credit-Access-Data.xlsx and FRBNY-SCE-Credit-Access-complete_microdata.xlsx
+---
 
-* **Source:** These files originate from the Federal Reserve Bank of New York
-    (FRBNY) Survey of Consumer Expectations (SCE) Credit Access Survey. The
-    `complete_microdata.xlsx` contains the full microdata from the survey,
-    while `Data.xlsx` is a summary/subset.
-  * **Source:** [https://www.newyorkfed.org/microeconomics/sce/credit-access](https://www.newyorkfed.org/microeconomics/sce/credit-access)
-* **Description:** The Survey of Consumer Expectations (SCE) Credit Access Survey
-    provides detailed information on consumers' experiences and expectations regarding
-    credit access. This includes data on applications for credit, approvals,
-    rejections, and reasons for credit decisions. The microdata contains
-    individual-level responses.
-* **Relevance:** High. This data is highly relevant for understanding consumer credit
-    behavior and access to traditional loans, which is crucial for comparing
-    with BNPL.
-    It can provide a baseline for traditional loan default analysis and insights
-    into factors affecting credit access.
-* **Known Limitations:** The specific variables related to default or
-    over-indebtedness would need to be identified and potentially engineered
-    from the raw survey responses. The data is self-reported, which can
-    introduce biases.
+### Dataset: `BNPL Intention to use.xlsx`
 
-## 4. public2024.csv
+**Description:** Survey results on consumer intentions and attitudes
+toward BNPL services.  
+**Why Deprecated:** BNPL-specific attitudinal data, not relevant to P2P
+lending.  
+**Source:**  
+<https://www.kaggle.com/datasets/vangelistsiligiris/bnpl-ethical-risk-synthetic-data>
 
-* **Source:** This file is the public use microdata from the
-    **2024 Survey of Household Economics and Decisionmaking (SHED)**
-    conducted by the
-    Federal Reserve Board.
-  * **Source:** [https://www.federalreserve.gov/consumerscommunities/shed_data.htm](https://www.federalreserve.gov/consumerscommunities/shed_data.htm)
-        (The SHED data is typically released annually, and `public2024.csv`
-        correspond to the 2024 release).
-* **Description:** The SHED survey provides a comprehensive look at the financial
-    lives of U.S. households, covering topics such as financial well-being, income,
-    expenses, savings, debt, and various financial behaviors. This CSV file
-    contains individual-level responses to the survey questions.
-* **Relevance:** High. This dataset is crucial for understanding the financial
-    landscape of U.S. households, identifying factors related to financial distress,
-    and potentially constructing a proxy for over-indebtedness. It can also provide
-    demographic and economic context for BNPL users.
-* **Known Limitations:** While comprehensive, the SHED dataset may not have a direct
-    variable specifically for BNPL loan defaults. A proxy for over-indebtedness would
-    need to be constructed from existing variables. The data is self-reported, which
-    can introduce reporting biases.
+---
 
-## 5. afdr_a8.csv and afdr_charts.csv
+### Dataset: `afdr_a8.csv`
 
-* **Source:** These files originates from the **Federal Reserve Board's
-    Agricultural Finance Databook (AFDR)**. The `afdr_a8.csv` contains
-    data for a
-    specific table (e.g., Table A.8), and `afdr_charts.csv` contains
-    data used to
-    generate charts in the databook.
-  * **Source:** [https://www.federalreserve.gov/releases/e15/](https://www.federalreserve.gov/releases/e15/)
-* **Description:** The Agricultural Finance Databook provides detailed statistics
-    on agricultural finance, including farm income, expenses, debt, and credit
-    conditions.
-    These CSV files would contain time-series or cross-sectional data
-    related to these agricultural financial indicators.
-* **Relevance:** Low. As noted in the previous data source evaluation, agricultural
-    finance data is generally not directly relevant to consumer loans, BNPL services,
-    or their default rates. This data would likely not be used for the core research
-    question but might provide very broad economic context if needed.
-* **Known Limitations:** Highly specific to the agricultural sector, making it
-    largely irrelevant for a project focused on consumer finance and BNPL. The data
-    might also be aggregated, limiting its use for individual-level analysis.
+**Description:** Historical agricultural loan characteristics and
+volumes.  
+**Why Deprecated:** Sector-specific (agriculture), not related to P2P
+platforms or defaults.  
+**Source:**  
+<https://www.ers.usda.gov/data-products/farm-income-and-wealth-statistics/>
 
-## 6. sce-household-spending-chart-data.xlsx
+---
 
-* **Source:** This file comes from the Federal Reserve Bank of New York
-    (FRBNY) Survey of Consumer Expectations (SCE), specifically data used for charts
-    related to household spending.
-  * **Source:** [https://www.newyorkfed.org/microeconomics/sce/](https://www.newyorkfed.org/microeconomics/sce/)
-* **Description:** This Excel file contains aggregated data points
-    used to generate charts on household spending trends, expectations, or
-    behaviors. It would
-    not contain individual-level microdata but rather summary statistics
-    over time or
-    across different groups.
-* **Relevance:** Medium. While it provides insights into household spending,
-    which is related to financial well-being, it is aggregated data and may not
-    be directly
-    usable for predictive modeling at an individual level. It can provide valuable
-    contextual information and trends.
-* **Known Limitations:** Aggregated data limits its use for granular analysis.
+### Dataset: `afdr_charts.csv`
 
-## 7. Loan Default Prediction Dataset (from Nikhil1e9)
+**Description:** Quarterly stats on non-real-estate farm loans (volume,
+rates, etc.).  
+**Why Deprecated:** Agriculture-focused, not relevant to P2P systems.  
+**Source:**  
+<https://www.ers.usda.gov/data-products/farm-income-and-wealth-statistics/>
 
-* **Source:** [Loan Default Prediction Dataset (Kaggle)](https://www.kaggle.com/datasets/nikhil1e9/loan-default)
-* **Description:** This dataset, sourced from a Coursera Loan Default Prediction
-   Challenge, contains 255,347 rows and 18 columns. It includes various features
- such as age, income, credit score, and employment details, along with a target
- variable indicating whether an individual defaulted on a loan payment
- It is designed for machine learning tasks to predict high-risk individuals
- for loan defaults.
-* **Relevance:** High. Directly relevant to the research question, providing
- a comprehensive set of demographic and financial behavioral features for
- predicting loan default likelihood.
-* **Known Limitations:** The dataset is large and will require thorough review.
+---
 
-## 8. Loan Default Dataset (from YasserH)
+### Dataset: `FRBNY-SCE-Credit-Access-complete_microdata.xlsx`
 
-* **Source:** [Loan Default Dataset (Kaggle)](https://www.kaggle.com/datasets/yasserh/loan-default-dataset)
-* **Description:** This dataset focuses on the loan default classification problem,
- aiming to help banks predict whether a new borrower is likely to default. It
- is a
- large dataset with multiple deterministic factors like borrower's income, gender,
- and loan purpose. The dataset may contain multicollinearity and empty values,
- requiring cleaning and preprocessing.
-* **Relevance:** High. Directly relevant to the research question, offering a
- rich set of features for building classification models to predict loan defaulters.
-* **Known Limitations:** The dataset is described as having strong multicollinearity
- and empty values, which will necessitate significant data cleaning and preprocessing
- before use.
+**Description:** Microdata from the FRBNY Survey on consumer credit
+access and usage.  
+**Why Deprecated:** General credit survey, not focused on P2P lending or
+defaults.  
+**Source:**  
+<https://www.newyorkfed.org/microeconomics/sce>
+
+---
+
+### Dataset: `FRBNY-SCE-Credit-Access-Data.xlsx`
+
+**Description:** Aggregated results from the FRBNY credit access survey.  
+**Why Deprecated:** Credit market data, not P2P-specific.  
+**Source:**  
+<https://www.newyorkfed.org/microeconomics/sce>
+
+---
+
+### Dataset: `loan_default_dataset.csv`
+
+**Description:** Default data, likely from traditional lenders.  
+**Why Deprecated:** Not tied to P2P platforms; used in earlier research.  
+**Source:**  
+Unknown – likely synthetic or benchmark dataset
+
+---
+
+### Dataset: `loan_default_prediction_dataset.csv`
+
+**Description:** Dataset for modeling loan defaults from non-P2P
+sources.  
+**Why Deprecated:** Not aligned with P2P lending objectives.  
+**Source:**  
+<https://www.kaggle.com/datasets/nikhil1e9/loan-default>
+
+---
+
+### Dataset: `public2024.csv`
+
+**Description:** General lending or credit data, open source.  
+**Why Deprecated:** Not related to P2P lending.  
+**Source:**  
+<https://www.federalreserve.gov/consumerscommunities/shed_data.htm>
+
+---
+
+### Dataset: `sce-household-spending-chart-data.xlsx`
+
+**Description:** Household spending stats from SCE.  
+**Why Deprecated:** Macroeconomic focus, not related to P2P defaults.  
+**Source:**  
+<https://www.newyorkfed.org/microeconomics/sce>
+
+---
+
+## Processed Data (from previous focus)
+
+### Dataset: `processed_data/BNPL_cleaned.csv`
+
+**Description:** Cleaned BNPL usage and financial stress data.  
+**Why Deprecated:** BNPL-specific; not relevant to new question.  
+**Source:**  
+Derived from `BNPL.csv`
+
+---
+
+### Dataset: `processed_data/BNPL_intention_to_use_cleaned.csv`
+
+**Description:** Cleaned survey on BNPL user intentions.  
+**Why Deprecated:** BNPL-focused, not related to P2P.  
+**Source:**  
+Derived from `BNPL Intention to use.xlsx`
+
+---
+
+### Dataset: `processed_data/FRBNY_SCE_Credit_Access_cleaned.csv`
+
+**Description:** Processed FRBNY SCE credit access data.  
+**Why Deprecated:** General credit data, not focused on P2P.  
+**Source:**  
+Derived from `FRBNY-SCE-Credit-Access-complete_microdata.xlsx`
+
+---
+
+### Dataset: `processed_data/afdr_cleaned.csv`
+
+**Description:** Cleaned data on farm loan characteristics.  
+**Why Deprecated:** Agriculture domain, not P2P-related.  
+**Source:**  
+Derived from `afdr_a8.csv`
+
+---
+
+### Dataset: `processed_data/public2024_cleaned.csv`
+
+**Description:** Cleaned version of public lending dataset.  
+**Why Deprecated:** No connection to P2P defaults or platforms.  
+**Source:**  
+Derived from `public2024.csv`
+
+---
+
+## Additional Data
+
+### Dataset: `additional_data/afdr_charts_cleaned_historical_match.csv`
+
+**Description:** Historical farm loan statistics – volume, rates, etc.  
+**Why Deprecated:** Agriculture-focused, not related to P2P platforms.  
+**Source:**  
+Derived from `afdr_charts.csv`
+
+---
