@@ -1,0 +1,115 @@
+Column Name,Description
+id,Unique identifier for each loan
+member_id,Unique identifier for each borrower
+loan_amnt,The listed amount of the loan applied for by the borrower
+funded_amnt,The total amount committed by investors at the time of loan funding
+funded_amnt_inv,The total amount funded by investors
+term,"Number of payments on the loan (e.g., 36 months, 60 months)"
+int_rate,Interest rate on the loan (annual percentage rate)
+installment,The monthly payment owed by the borrower if the loan is funded
+grade,"Loan grade assigned by Lending Club (A to G), indicating credit quality"
+sub_grade,"More granular loan grade (e.g., A1, A2, ..., G5)"
+emp_title,Job title of the borrower (free text)
+emp_length,"Employment length in years (e.g., ""10+ years"", ""< 1 year"")"
+home_ownership,"Home ownership status: RENT, OWN, MORTGAGE, OTHER"
+annual_inc,Self-reported annual income of the borrower
+verification_status,"Income verification status: Verified, Source Verified, Not Verified"
+issue_d,"The month the loan was funded (e.g., ""Dec-2011"")"
+loan_status,"Current status of the loan (Fully Paid, Charged Off, Default, Current, Late, etc.)"
+pymnt_plan,Whether a payment plan has been put in place (y/n)
+url,URL for the loan on Lending Club website
+desc,Loan description provided by the borrower (free text)
+purpose,"The stated purpose of the loan (e.g., debt consolidation, credit card, home improvement)"
+title,Loan title provided by the borrower (free text)
+zip_code,First 3 digits of the borrower’s ZIP code
+addr_state,State of the borrower’s residence
+dti,Debt-to-income ratio (monthly debt payments divided by monthly income)
+delinq_2yrs,Number of delinquencies in the past 2 years
+earliest_cr_line,"The month the borrower’s earliest reported credit line was opened (e.g., ""Jan-1985"")"
+fico_range_low,Lower bound of borrower’s FICO credit score range
+fico_range_high,Upper bound of borrower’s FICO credit score range
+inq_last_6mths,Number of credit inquiries in the past 6 months
+mths_since_last_delinq,Months since last delinquency (null if none)
+mths_since_last_record,"Months since last public record (e.g., bankruptcy) (null if none)"
+open_acc,Number of open credit lines in the borrower’s credit file
+pub_rec,"Number of derogatory public records (e.g., bankruptcies)"
+revol_bal,Total credit revolving balance
+revol_util,Revolving line utilization rate (percentage of credit line used)
+total_acc,Total number of credit lines currently in borrower’s credit file
+initial_list_status,"Initial listing status of the loan (whole, fractional)"
+out_prncp,Remaining outstanding principal on the loan
+out_prncp_inv,Remaining outstanding principal funded by investors
+total_pymnt,Payments received to date for principal and interest
+total_pymnt_inv,Payments received to date from investors
+total_rec_prncp,Principal received to date
+total_rec_int,Interest received to date
+total_rec_late_fee,Late fees received to date
+recoveries,Post charge-off gross recovery amount
+collection_recovery_fee,Fees charged for collection recovery
+last_pymnt_d,Last month payment was received
+last_pymnt_amnt,Last payment amount received
+next_pymnt_d,Next scheduled payment date
+last_credit_pull_d,The most recent month Lending Club pulled credit for this loan
+collections_12_mths_ex_med,Number of collections in last 12 months excluding medical collections
+mths_since_last_major_derog,Months since most recent 90-day or worse rating (null if none)
+policy_code,Lending Club policy code (typically 1)
+application_type,Indicates whether the loan is individual or joint (individual/joint)
+annual_inc_joint,Annual income of co-borrower (if joint application)
+dti_joint,Debt-to-income ratio of co-borrower (if joint application)
+verification_status_joint,Income verification status of co-borrower (if joint application)
+acc_now_delinq,Number of accounts currently delinquent
+tot_coll_amt,Total collection amounts outstanding
+tot_cur_bal,Total current balance of all accounts
+open_acc_6m,Number of accounts opened in last 6 months
+open_il_6m,Number of installment accounts opened in last 6 months
+open_il_12m,Number of installment accounts opened in last 12 months
+open_il_24m,Number of installment accounts opened in last 24 months
+mths_since_rcnt_il,Months since most recent installment loan opened
+total_bal_il,Total balance of all installment accounts
+il_util,Installment accounts utilization rate
+open_rv_12m,Number of revolving accounts opened in last 12 months
+open_rv_24m,Number of revolving accounts opened in last 24 months
+max_bal_bc,Maximum balance on all bankcards
+all_util,Balance to credit limit on all bankcards
+total_rev_hi_lim,Total revolving high credit/credit limit
+inq_fi,Number of personal finance inquiries
+total_cu_tl,Number of credit union accounts
+inq_last_12m,Number of inquiries in last 12 months
+acc_open_past_24mths,Number of accounts opened in past 24 months
+avg_cur_bal,Average current balance of all accounts
+bc_open_to_buy,Open to buy on bankcards
+bc_util,Bankcard utilization rate
+chargeoff_within_12_mths,Number of charge-offs within last 12 months
+delinq_amnt,The past-due amount owed for delinquent accounts
+mo_sin_old_il_acct,Months since oldest installment account opened
+mo_sin_old_rev_tl_op,Months since oldest revolving account opened
+mo_sin_rcnt_rev_tl_op,Months since most recent revolving account opened
+mo_sin_rcnt_tl,Months since most recent account opened
+mort_acc,Number of mortgage accounts
+mths_since_recent_bc,Months since most recent bankcard
+mths_since_recent_bc_dlq,Months since most recent bankcard delinquency
+mths_since_recent_inq,Months since most recent inquiry
+mths_since_recent_revol_delinq,Months since most recent revolving delinquency
+num_accts_ever_120_pd,Number of accounts ever 120 or more days past due
+num_actv_bc_tl,Number of currently active bankcard accounts
+num_actv_rev_tl,Number of currently active revolving accounts
+num_bc_sats,Number of satisfactory bankcard accounts
+num_bc_tl,Number of bankcard accounts
+num_il_tl,Number of installment accounts
+num_op_rev_tl,Number of open revolving accounts
+num_rev_accts,Number of revolving accounts
+num_rev_tl_bal_gt_0,Number of revolving trades with balance greater than zero
+num_sats,Number of satisfactory accounts
+num_tl_120dpd_2m,Number of accounts currently 120 days past due
+num_tl_30dpd,Number of accounts currently 30 days past due
+num_tl_90g_dpd_24m,Number of accounts 90 days past due or worse in last 24 months
+num_tl_op_past_12m,Number of accounts opened in past 12 months
+pct_tl_nvr_dlq,Percent of trades never delinquent
+percent_bc_gt_75,Percent of bankcard accounts with balance greater than 75% of credit limit
+pub_rec_bankruptcies,Number of public record bankruptcies
+tax_liens,Number of tax liens
+tot_hi_cred_lim,Total high credit/credit limit
+total_bal_ex_mort,Total balance excluding mortgage accounts
+total_bc_limit,Total bankcard credit limit
+total_il_high_credit_limit,Total installment loan high credit limit
+loan_status,"Final status of the loan (Fully Paid, Charged Off, Default, Current, Late, etc.)"
