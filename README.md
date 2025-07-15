@@ -91,9 +91,10 @@ Our modeling approach includes the following stages:
 
 ## 📁 Datasets Used
 
-All datasets are stored in our  
-[`/1_datasets/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/1_datasets)  
-folder, with cleaning and prep scripts in  
+All datasets are stored in our
+[`/1_datasets/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/1_datasets)
+folder.
+Cleaning and preparation scripts are in
 [`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation).
 
 The primary dataset used in our analysis is the Lending Club loan dataset, which
