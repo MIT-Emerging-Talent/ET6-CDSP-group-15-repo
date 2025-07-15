@@ -26,16 +26,17 @@ investor confidence in the evolving alternative finance ecosystem.
 
 We are on a mission to:
 
-- Build an open, data-driven framework for assessing default risk in P2P lending.
-- Identify borrower and loan traits most predictive of default.  
-- Apply interpretable machine learning to improve credit assessment.  
-- Support investors, platforms, and regulators with transparent risk insights.  
+- Build an open, data-driven framework for assessing default risk in P2P
+  lending.
+- Identify borrower and loan traits most predictive of default.
+- Apply interpretable machine learning to improve credit assessment.
+- Support investors, platforms, and regulators with transparent risk insights.
 
 ## Research Aim
 
 Our aim is to uncover the key drivers of default risk in P2P lending systems.
-Using historical data from Lending Club, we analyze borrower behavior,
-loan characteristics, and repayment outcomes to predict risk.  
+Using historical data from Lending Club, we analyze borrower behavior, loan
+characteristics, and repayment outcomes to predict risk.
 
 We train models that balance accuracy with explainability, enabling decisions  
 that are both data-backed and transparent. The ultimate goal is to build  
@@ -47,11 +48,11 @@ tools that help platforms and investors reduce risk and improve outcomes.
 
 P2P platforms offer flexible credit access to millions, yet face  
 a persistent challenge: borrower default. Unpaid loans hurt investors,  
-threaten platform stability, and erode trust in digital finance.  
+threaten platform stability, and erode trust in digital finance.
 
 Conventional credit scoring may miss key behavioral signals. Many borrowers,  
 especially younger users, accumulate invisible debt across platforms.  
-Without reliable models, lenders can't detect risk early or fairly.  
+Without reliable models, lenders can't detect risk early or fairly.
 
 By studying a large dataset of loan records and repayment history,  
 we aim to reveal the hidden indicators of credit default risk  
@@ -102,10 +103,10 @@ which includes over 2 million loans with borrower traits and repayment outcomes.
 
 **Key dataset features include:**
 
-- Borrower attributes: employment length, annual income, FICO scores  
-- Loan details: loan amount, term, purpose, interest rate, installment amount  
-- Credit history: earliest credit line, delinquencies, open accounts  
-- Loan outcome: loan status (fully paid, charged-off, default)  
+- Borrower attributes: employment length, annual income, FICO scores
+- Loan details: loan amount, term, purpose, interest rate, installment amount
+- Credit history: earliest credit line, delinquencies, open accounts
+- Loan outcome: loan status (fully paid, charged-off, default)
 
 ## 👥 Meet the Team
 
@@ -216,11 +217,11 @@ Our project explores the intersection of behavioral finance and machine
 learning,  
 with a focus on peer-to-peer (P2P) credit risk prediction. We aim to:
 
-- Identify key borrower and loan features linked to default outcomes  
-- Build predictive models using Lending Club loan performance data  
-- Analyze behavioral and demographic traits influencing credit risk  
-- Apply feature importance tools to surface critical default indicators  
-- Support fairer, data-driven credit assessment in alternative lending  
+- Identify key borrower and loan features linked to default outcomes
+- Build predictive models using Lending Club loan performance data
+- Analyze behavioral and demographic traits influencing credit risk
+- Apply feature importance tools to surface critical default indicators
+- Support fairer, data-driven credit assessment in alternative lending
 
 ## 🛠️ Technical Stack
 
@@ -246,28 +247,28 @@ Our repository is organized into key sections:
 
 1. Clone and setup
 
-    ```bash
-    # Clone the repository
-    git clone https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo.git
-    cd ET6-CDSP-group-15-repo
+   ```bash
+   # Clone the repository
+   git clone https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo.git
+   cd ET6-CDSP-group-15-repo
 
-    # Create environment
-    conda env create -f environment.yml
-    conda activate datacents
+   # Create environment
+   conda env create -f environment.yml
+   conda activate datacents
 
-    # Or install manually
-    pip install -r requirements.txt
-    ```
+   # Or install manually
+   pip install -r requirements.txt
+   ```
 
 2. Start exploring
 
-    ```bash
-    # Launch Jupyter Notebook
-    jupyter notebook
-    ```
+   ```bash
+   # Launch Jupyter Notebook
+   jupyter notebook
+   ```
 
-Navigate to the `4_data_analysis` directory to begin exploring our
-financial data analysis.
+Navigate to the `4_data_analysis` directory to begin exploring our financial
+data analysis.
 
 ## 📈 Project Progress
 
@@ -293,7 +294,7 @@ for details.
 
 [![Quote](https://img.shields.io/badge/Quote-Finance%20%26%20Data-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
-> *"The goal is to turn data into information, and information into insight." -
-> Carly Fiorina*
+> _"The goal is to turn data into information, and information into insight." -
+> Carly Fiorina_
 
 Join us as we make sense — and DataCents — out of information.
