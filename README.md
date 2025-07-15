@@ -22,7 +22,8 @@ investor confidence in the evolving alternative finance ecosystem.
 
 ### Our Mission
 
-[![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
+[![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]
+(<https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo>)
 
 We are on a mission to:
 
@@ -33,8 +34,8 @@ We are on a mission to:
 
 ## Research Aim
 
-Our aim is to uncover the key drivers of default risk in P2P lending systems.  
-Using historical data from Lending Club, we analyze borrower behavior,  
+Our aim is to uncover the key drivers of default risk in P2P lending systems.
+Using historical data from Lending Club, we analyze borrower behavior,
 loan characteristics, and repayment outcomes to predict risk.  
 
 We train models that balance accuracy with explainability, enabling decisions  
@@ -85,7 +86,7 @@ Our modeling approach includes the following stages:
 - **Interpretability Tools**: Apply SHAP analysis and feature importance  
   methods to explain model decisions and highlight key predictors.
 
-- **Validation**: Evaluate models with train-test splits and performance metrics  
+- **Validation**: Evaluate models with train-test splits and performance metrics
   (AUC, accuracy, recall) to ensure generalizability and robustness.
 
 ---
