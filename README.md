@@ -22,8 +22,7 @@ investor confidence in the evolving alternative finance ecosystem.
 
 ### Our Mission
 
-[![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]
-(<https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo>)
+[![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
 We are on a mission to:
 
@@ -267,8 +266,8 @@ Our repository is organized into key sections:
     jupyter notebook
     ```
 
-Navigate to the `4_data_analysis` directory to begin exploring our financial
-data analysis.
+Navigate to the `4_data_analysis` directory to begin exploring our
+financial data analysis.
 
 ## 📈 Project Progress
 
