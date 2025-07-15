@@ -10,13 +10,13 @@
 
 ## About Our Team
 
-**DataCents** is a collaborative research team using data science to decode  
+**DataCents** is a collaborative research team using data science to decode
 credit risk in peer-to-peer (P2P) lending platforms.
 
-We apply machine learning and interpretability tools to large-scale lending  
-data to identify the strongest predictors of loan default. Our goal is to  
-improve credit assessment, inform smarter lending decisions, and enhance  
-investor confidence in the evolving alternative finance ecosystem.
+We apply machine learning and interpretability tools to large-scale lending data
+to identify the strongest predictors of loan default. Our goal is to improve
+credit assessment, inform smarter lending decisions, and enhance investor
+confidence in the evolving alternative finance ecosystem.
 
 ---
 
@@ -26,8 +26,7 @@ investor confidence in the evolving alternative finance ecosystem.
 
 We are on a mission to:
 
-- Build an open, data-driven framework for assessing default risk in P2P
-  lending.
+- Build an open, data-driven framework for assessing default risk in P2P lending.
 - Identify borrower and loan traits most predictive of default.
 - Apply interpretable machine learning to improve credit assessment.
 - Support investors, platforms, and regulators with transparent risk insights.
@@ -38,53 +37,52 @@ Our aim is to uncover the key drivers of default risk in P2P lending systems.
 Using historical data from Lending Club, we analyze borrower behavior, loan
 characteristics, and repayment outcomes to predict risk.
 
-We train models that balance accuracy with explainability, enabling decisions  
-that are both data-backed and transparent. The ultimate goal is to build  
+We train models that balance accuracy with explainability, enabling decisions
+that are both data-backed and transparent. The ultimate goal is to build
 tools that help platforms and investors reduce risk and improve outcomes.
 
 ---
 
 ## Problem Statement
 
-P2P platforms offer flexible credit access to millions, yet face  
-a persistent challenge: borrower default. Unpaid loans hurt investors,  
-threaten platform stability, and erode trust in digital finance.
+- P2P platforms offer flexible credit access to millions, yet face a persistent
+challenge: borrower default. Unpaid loans hurt investors, threaten platform
+stability, and erode trust in digital finance.
 
-Conventional credit scoring may miss key behavioral signals. Many borrowers,  
-especially younger users, accumulate invisible debt across platforms.  
-Without reliable models, lenders can't detect risk early or fairly.
+- Conventional credit scoring may miss key behavioral signals. Many borrowers,
+especially younger users, accumulate invisible debt across platforms. Without
+reliable models, lenders can't detect risk early or fairly.
 
-By studying a large dataset of loan records and repayment history,  
-we aim to reveal the hidden indicators of credit default risk  
-and build interpretable models for real-world risk prediction.
+- By studying a large dataset of loan records and repayment history, we aim to
+reveal the hidden indicators of credit default risk and build interpretable
+models for real-world risk prediction.
 
 ### Research Question
 
-What are the key borrower and loan characteristics that best predict  
-default risk in peer-to-peer (P2P) lending platforms in the United States?
+What are the key borrower and loan characteristics that best predict default
+risk in peer-to-peer (P2P) lending platforms in the United States?
 
 ### 🔍 Modeling the Research Question
 
-To address our research question, we analyze Lending Club data  
-to identify the borrower and loan features that best predict default risk.
+To address our research question, we analyze Lending Club data to identify the
+borrower and loan features that best predict default risk.
 
 Our modeling approach includes the following stages:
 
-- **Data Cleaning**: Filter loans with known outcomes, remove anomalies,  
-  and handle missing values for consistent analysis.
+- **Data Cleaning**: Filter loans with known outcomes, remove anomalies, and
+  handle missing values for consistent analysis.
 
-- **Feature Engineering**: Create meaningful variables from raw data,  
-  such as debt-to-income ratios, credit history flags, and loan grade scores.
+- **Feature Engineering**: Create meaningful variables from raw data, such as
+  debt-to-income ratios, credit history flags, and loan grade scores.
 
-- **Exploratory Analysis**: Visualize patterns of default by borrower  
+- **Exploratory Analysis**: Visualize patterns of default by borrower
   demographics, loan purpose, FICO ranges, and installment size.
 
 - **Modeling Techniques**: Use classification models like  
-  Logistic Regression, Random Forest, and XGBoost  
-  to estimate default likelihood.
+  Logistic Regression, Random Forest, and XGBoost to estimate default likelihood.
 
-- **Interpretability Tools**: Apply SHAP analysis and feature importance  
-  methods to explain model decisions and highlight key predictors.
+- **Interpretability Tools**: Apply SHAP analysis and feature importance methods
+  to explain model decisions and highlight key predictors.
 
 - **Validation**: Evaluate models with train-test splits and performance metrics
   (AUC, accuracy, recall) to ensure generalizability and robustness.
@@ -98,8 +96,8 @@ All datasets are stored in our
 folder, with cleaning and prep scripts in  
 [`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation).
 
-The primary dataset used in our analysis is the Lending Club loan dataset,  
-which includes over 2 million loans with borrower traits and repayment outcomes.
+The primary dataset used in our analysis is the Lending Club loan dataset, which
+includes over 2 million loans with borrower traits and repayment outcomes.
 
 **Key dataset features include:**
 
@@ -214,8 +212,7 @@ which includes over 2 million loans with borrower traits and repayment outcomes.
 ## 🔍 Research Focus
 
 Our project explores the intersection of behavioral finance and machine
-learning,  
-with a focus on peer-to-peer (P2P) credit risk prediction. We aim to:
+learning, with a focus on peer-to-peer (P2P) credit risk prediction. We aim to:
 
 - Identify key borrower and loan features linked to default outcomes
 - Build predictive models using Lending Club loan performance data
@@ -267,23 +264,20 @@ Our repository is organized into key sections:
    jupyter notebook
    ```
 
-Navigate to the `4_data_analysis` directory to begin exploring our
-financial data analysis.
+Navigate to the `4_data_analysis` directory to begin exploring our financial
+data analysis.
 
 ## 📈 Project Progress
 
-[![Progress](https://img.shields.io/badge/Progress-15%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
+[![Progress](https://img.shields.io/badge/Progress-60%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
 ## 📈 Key Findings
 
-- Initial data analysis reveals promising patterns
-- Machine learning models show high accuracy
-- Market trends indicate significant opportunities
+> To be added after the analysis is conducted.
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for
-guidelines.
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📝 License
 
