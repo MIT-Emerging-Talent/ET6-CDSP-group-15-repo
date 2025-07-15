@@ -267,8 +267,8 @@ Our repository is organized into key sections:
    jupyter notebook
    ```
 
-Navigate to the `4_data_analysis` directory to begin exploring our financial
-data analysis.
+Navigate to the `4_data_analysis` directory to begin exploring our
+financial data analysis.
 
 ## 📈 Project Progress
 
