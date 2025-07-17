@@ -8,99 +8,104 @@
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=40&pause=1000&color=2196F3&center=true&vCenter=true&width=600&height=100&lines=Welcome+to+DataCents!;Where+Data+Meets+Finance)
 
-## 📊 About Our Project
+## About Our Team
 
-Welcome to **DataCents** - where we decode financial patterns to understand default
-risks in the BNPL and traditional lending systems. 🌟🎯
+**DataCents** is a collaborative research team using data science to decode
+credit risk in peer-to-peer (P2P) lending platforms.
 
-## 🔍 What is DataCents?
+We apply machine learning and interpretability tools to large-scale lending data
+to identify the strongest predictors of loan default. Our goal is to improve
+credit assessment, inform smarter lending decisions, and enhance investor
+confidence in the evolving alternative finance ecosystem.
 
-> **DataCents** DataCents is a collaborative data science project investigating
-> how demographic and behavioral features influence the risk of default in Buy Now,
-> Pay Later (BNPL) services and traditional loans.
->
-> We are analyzing multiple datasets to answer the core question: "How do
-> demographic and financial behavior features influence the likelihood of
-> default across traditional loans and Buy Now, Pay Later (BNPL) services?" 📈🤔
+---
 
-### 🎯 Our Mission
+### Our Mission
 
 [![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
-We're on a mission to:
+We are on a mission to:
 
-- Understand key indicators of default across both BNPL and traditional credit ecosystems
+- Build an open, data-driven framework for assessing default risk in P2P lending.
+- Identify borrower and loan traits most predictive of default.
+- Apply interpretable machine learning to improve credit assessment.
+- Support investors, platforms, and regulators with transparent risk insights.
 
-- Identify behavioral and demographic factors that shape financial risk
+## Research Aim
 
-- Build insights that can help inform better policy, financial education, and
-  early interventions for Gen Z consumers
+Our aim is to uncover the key drivers of default risk in P2P lending systems.
+Using historical data from Lending Club, we analyze borrower behavior, loan
+characteristics, and repayment outcomes to predict risk.
 
-## 🧠 Problem statement
+We train models that balance accuracy with explainability, enabling decisions
+that are both data-backed and transparent. The ultimate goal is to build
+tools that help platforms and investors reduce risk and improve outcomes.
 
-BNPL services create invisible debt accumulation across multiple
-platforms that neither consumers nor traditional credit monitoring
-systems can effectively track, leading to unexpected financial
-stress and over-indebtedness among young adults who believe
-they are managing their finances responsibly.
+---
 
-Traditional loans, while more regulated, are also susceptible to default due to
-poor credit behavior, lack of transparency, or poor access to financial literacy.
-Understanding the interplay between both mechanisms is crucial.
+## Problem Statement
+
+- P2P platforms offer flexible credit access to millions, yet face a persistent
+challenge: borrower default. Unpaid loans hurt investors, threaten platform
+stability, and erode trust in digital finance.
+
+- Conventional credit scoring may miss key behavioral signals. Many borrowers,
+especially younger users, accumulate invisible debt across platforms. Without
+reliable models, lenders can't detect risk early or fairly.
+
+- By studying a large dataset of loan records and repayment history, we aim to
+reveal the hidden indicators of credit default risk and build interpretable
+models for real-world risk prediction.
 
 ### Research Question
 
-How do demographic and financial behavior features influence the likelihood
-of default across traditional loans and Buy Now, Pay Later (BNPL) services?
+What are the key borrower and loan characteristics that best predict default
+risk in peer-to-peer (P2P) lending platforms in the United States?
 
 ### 🔍 Modeling the Research Question
 
-To model this research question, we collected, cleaned, and integrated diverse data
-sources that include demographic characteristics, credit behavior, and loan
-attributes. Our modeling process involves:
+To address our research question, we analyze Lending Club data to identify the
+borrower and loan features that best predict default risk.
 
-- **Data Integration**: Combining relevant public and survey datasets that cover
-  both BNPL and traditional credit usage.
-- **Feature Engineering**: Creating variables that capture behavioral indicators
-  such as frequency of borrowing, loan size distribution, income-to-debt ratios,
-  and time to repayment.
-- **Exploratory Analysis**: Understanding statistical trends and correlation patterns
-  to inform feature selection.
-- **Modeling Techniques**: Using classification algorithms (*Logistic Regression,
-  Random Forest, XGBoost*) to predict likelihood of default.
-- **Interpretability Tools**: Using SHAP values and feature importance analysis to
-  explain model behavior.
+Our modeling approach includes the following stages:
+
+- **Data Cleaning**: Filter loans with known outcomes, remove anomalies, and
+  handle missing values for consistent analysis.
+
+- **Feature Engineering**: Create meaningful variables from raw data, such as
+  debt-to-income ratios, credit history flags, and loan grade scores.
+
+- **Exploratory Analysis**: Visualize patterns of default by borrower
+  demographics, loan purpose, FICO ranges, and installment size.
+
+- **Modeling Techniques**: Use classification models like  
+  Logistic Regression, Random Forest, and XGBoost to estimate default likelihood.
+
+- **Interpretability Tools**: Apply SHAP analysis and feature importance methods
+  to explain model decisions and highlight key predictors.
+
+- **Validation**: Evaluate models with train-test splits and performance metrics
+  (AUC, accuracy, recall) to ensure generalizability and robustness.
 
 ---
 
 ## 📁 Datasets Used
 
-We documented and curated all our datasets in the
+All datasets are stored in our
 [`/1_datasets/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/1_datasets)
-folder of our GitHub repository. This includes both modeling-ready and
-contextual datasets, each with relevant metadata and cleaning scripts in the [`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation)
 folder.
+Cleaning and preparation scripts are in
+[`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation).
 
-**Key features include:**
+The primary dataset used in our analysis is the Lending Club loan dataset, which
+includes over 2 million loans with borrower traits and repayment outcomes.
 
-- BNPL usage patterns, credit intention, and financial behavior metrics  
-- Traditional loan characteristics, defaults, and borrower traits  
-- Credit access and maturity structure from macro-level sources  
+**Key dataset features include:**
 
-For a full list and details, visit: [`/1_datasets/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/1_datasets)
-
-Each dataset was preprocessed in the
-[`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation)
-folder with steps including:
-
-- Cleaning missing and anomalous values  
-- Standardizing time formats  
-- Renaming columns for clarity  
-- Merging and aggregating loan segments  
-
-> **Note**: Some datasets such as *FRBNY SCE* were used more for contextual
-> understanding and trend visualization, and not for predictive modeling
-> due to aggregated structure.
+- Borrower attributes: employment length, annual income, FICO scores
+- Loan details: loan amount, term, purpose, interest rate, installment amount
+- Credit history: earliest credit line, delinquencies, open accounts
+- Loan outcome: loan status (fully paid, charged-off, default)
 
 ## 👥 Meet the Team
 
@@ -207,14 +212,14 @@ folder with steps including:
 
 ## 🔍 Research Focus
 
-Our project delves into the intersection of behavioral finance and machine learning,
-exploring:
+Our project explores the intersection of behavioral finance and machine
+learning, with a focus on peer-to-peer (P2P) credit risk prediction. We aim to:
 
-- BNPL usage patterns among Gen Z consumers
-- Predictive modeling of over-indebtedness risk
-- Behavioral and transactional feature analysis
-- Early warning signal identification
-- 6-month risk horizon assessment
+- Identify key borrower and loan features linked to default outcomes
+- Build predictive models using Lending Club loan performance data
+- Analyze behavioral and demographic traits influencing credit risk
+- Apply feature importance tools to surface critical default indicators
+- Support fairer, data-driven credit assessment in alternative lending
 
 ## 🛠️ Technical Stack
 
@@ -240,43 +245,40 @@ Our repository is organized into key sections:
 
 1. Clone and setup
 
-    ```bash
-    # Clone the repository
-    git clone https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo.git
-    cd ET6-CDSP-group-15-repo
+   ```bash
+   # Clone the repository
+   git clone https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo.git
+   cd ET6-CDSP-group-15-repo
 
-    # Create environment
-    conda env create -f environment.yml
-    conda activate datacents
+   # Create environment
+   conda env create -f environment.yml
+   conda activate datacents
 
-    # Or install manually
-    pip install -r requirements.txt
-    ```
+   # Or install manually
+   pip install -r requirements.txt
+   ```
 
 2. Start exploring
 
-    ```bash
-    # Launch Jupyter Notebook
-    jupyter notebook
-    ```
+   ```bash
+   # Launch Jupyter Notebook
+   jupyter notebook
+   ```
 
 Navigate to the `4_data_analysis` directory to begin exploring our financial
 data analysis.
 
 ## 📈 Project Progress
 
-[![Progress](https://img.shields.io/badge/Progress-15%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
+[![Progress](https://img.shields.io/badge/Progress-60%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
 ## 📈 Key Findings
 
-- Initial data analysis reveals promising patterns
-- Machine learning models show high accuracy
-- Market trends indicate significant opportunities
+> To be added after the analysis is conducted.
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for
-guidelines.
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📝 License
 
@@ -287,7 +289,7 @@ for details.
 
 [![Quote](https://img.shields.io/badge/Quote-Finance%20%26%20Data-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
-> *"The goal is to turn data into information, and information into insight." -
-> Carly Fiorina*
+> _"The goal is to turn data into information, and information into insight." -
+> Carly Fiorina_
 
 Join us as we make sense — and DataCents — out of information.
