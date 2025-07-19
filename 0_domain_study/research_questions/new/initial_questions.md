@@ -17,7 +17,7 @@ prediction in U.S. peer-to-peer (P2P) lending.
 
 ## Supporting Questions
 
-**Technical**
+### Technical
 
 - Which data cleaning and feature engineering steps are critical for preparing
   P2P loan datasets?
@@ -26,14 +26,14 @@ prediction in U.S. peer-to-peer (P2P) lending.
 - What role do explainability frameworks (e.g., SHAP, LIME) play in model
   transparency?
 
-**Business**
+### Business
 
 - How can P2P platforms enhance loan origination and pricing using predictive
   risk analytics?
 - What characteristics should investors prioritize when selecting loans for
   their portfolios?
 
-**User**
+### User
 
 - Which borrower demographics and financial behaviors most strongly correlate
   with default risk?

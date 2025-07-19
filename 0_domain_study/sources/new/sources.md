@@ -7,7 +7,7 @@ methodology and research focus.
 
 - **Lending Club (Kaggle):**
   - Title: Lending Club Loan Data
-  - Source: https://www.kaggle.com/datasets/wordsforthewise/lending-club
+  - Source: [Kaggle Dataset](https://www.kaggle.com/datasets/wordsforthewise/lending-club)
   - Description: U.S. peer-to-peer loan-level dataset with detailed borrower and
     loan attributes.
   - [Note: This is the only dataset used in this study.]
