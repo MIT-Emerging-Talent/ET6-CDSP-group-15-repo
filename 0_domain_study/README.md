@@ -1,80 +1,106 @@
-# Domain Study
+# Domain Study: Peer-to-Peer (P2P) Lending Risk
 
-This document outlines our foundational research into the domain of Buy Now, Pay
-Later (BNPL) services and their implications for credit behavior, over-indebtedness,
-and financial risk modeling.
+This document outlines our foundational research into the domain of Peer-to-Peer
+(P2P) lending and the critical challenge of modeling loan default risk. It also
+provides an overview of the contents of this folder.
 
-## BNPL
+## Folder Contents
 
-The rise of BNPL services has significantly changed how consumers — especially
-young adults (Gen Z) — access credit. These services offer short-term installment
-payments with minimal upfront verification and no interest if payments are made
-on time. However, this convenience may come at the cost of untracked debt accumulation,
-missed payments,and difficulty predicting long-term financial stress.
+This `0_domain_study` folder is organized to document our research process and
+findings.
 
-Despite growing BNPL adoption, traditional credit systems often fail to monitor
-or incorporate BNPL behavior. This creates blind spots in assessing financial
-risk and raises critical questions about financial inclusion and consumer protection.
+- **`README.md` (This File):** Provides a high-level summary of our research
+  domain, the evolution of our research question, and the overall folder
+  structure.
+- **`guide.md`:** Offers a detailed orientation to the folder's contents,
+  explaining the purpose of each file and sub-directory.
+- **`research_questions/`:** Contains the history of our research questions.
+  - `old/`: Documents our initial research on "Buy Now, Pay Later" (BNPL).
+  - `new/`: Details our current, refined research questions on P2P lending.
+- **`sources/`:** Lists the data and literature that support our research.
+  - `old/`: Contains sources related to our initial BNPL research.
+  - `new/`: Contains sources for our current P2P lending research.
+
+## Evolution of Our Research
+
+Our initial research focused on the risks associated with "Buy Now, Pay Later"
+(BNPL) services. However, due to the limited availability of public datasets
+required to rigorously investigate our initial questions, we pivoted our
+research.
+
+Our new focus is on **Peer-to-Peer (P2P) lending**, a domain with rich, publicly
+available data that allows for robust modeling and analysis of credit risk.
+
+## The P2P Lending Landscape
+
+Peer-to-Peer (P2P) lending platforms have emerged as a significant alternative
+to traditional banking, connecting individual borrowers with investors directly.
+These platforms offer greater access to credit for borrowers and potentially
+higher returns for investors. However, the decentralized nature of P2P lending
+introduces unique challenges in assessing borrower creditworthiness and
+predicting the likelihood of default, which is crucial for sustainable growth
+and investor confidence.
 
 ## Problem Statement
 
-BNPL services create invisible debt accumulation across multiple platforms that
-neither consumers nor traditional credit monitoring systems can effectively
-track, leading to unexpected financial stress and over-indebtedness among young
-adults who believe they are managing their finances responsibly.
+While P2P platforms provide extensive data on loans and borrowers, accurately
+predicting which loans will default remains a complex problem. Investors face
+the risk of capital loss due to insufficient or ineffective risk assessment
+models. Therefore, there is a critical need to develop robust predictive models
+that can identify the key drivers of default risk, enabling investors to make
+more informed decisions and platforms to refine their underwriting standards.
 
 ## Research Question
 
-*How accurately can a machine learning model, using behavioral and transactional
-data, predict over-indebtedness risk among Gen Z Buy Now, Pay Later (BNPL) users
-within a 6-month horizon, and which features provide the most reliable early-warning
-signals?*
+_What are the key borrower and loan characteristics that best predict default
+risk in peer-to-peer (P2P) lending platforms in the United States?_
 
-### Systems Thinking Approach
+### Secondary Questions
 
-Rather than viewing BNPL risks as isolated individual problems,
-we examine the interconnected financial inclusion ecosystem including:
+1. Which machine learning approaches most accurately model default risk in P2P
+   lending data?
+2. How do features such as credit grade, interest rate, debt-to-income ratio,
+   income, loan term, and loan purpose contribute to risk prediction?
+3. How do default risk patterns change across time, different regions, or
+   borrower segments?
+4. In what ways can advanced risk modeling support investor decisions and
+   improve P2P platform underwriting?
 
-#### Primary Stakeholders
+## Key Focus Areas
 
-- Consumers: Seeking accessible, affordable credit alternatives
-- BNPL Providers: Balancing growth, profitability, and risk management
-- Merchants: Using BNPL to increase sales and customer satisfaction
-- Regulators: Protecting consumers while fostering beneficial innovation
-- Traditional Lenders: Adapting to competitive pressure from fintech
+Our research is structured around three core areas:
 
-#### System Dynamics
+- **Technical Focus**: We will concentrate on advanced data cleaning, feature
+  engineering, and benchmarking machine learning models (Logistic Regression,
+  Random Forest, XGBoost). We will also use explainability techniques like SHAP
+  to interpret model predictions.
+- **Business Focus**: The insights from our models will be framed to improve
+  loan pricing, enhance underwriting processes, and develop actionable risk
+  management tools for investors.
+- **User Focus**: We aim to identify risk signals across different borrower
+  types and investigate factors related to financial health, while ensuring
+  fairness in risk assessment.
 
-- Information Asymmetries: Providers have more cross-platform visibility than consumers
-- Incentive Misalignments: Growth incentives may conflict with consumer welfare
-- Regulatory Arbitrage: BNPL operates with fewer rules than traditional credit
-- Network Effects: Platform adoption benefits create market concentration
-- Behavioral Biases: Mental accounting and present bias affect user decisions
+## Methodology and Dataset
 
-## Findings
+Our study will utilize a quantitative approach, applying machine learning
+techniques to a large-scale dataset.
 
-Our domain research revealed the following major themes and gaps:
+### Dataset
 
-### BNPL and Credit Behavior
+The primary dataset for this research is the **Lending Club Loan Data** from
+Kaggle, which contains comprehensive information on loans issued in the U.S.
 
-There is growing discussion on BNPL’s popularity  particularly among Gen Z  and
-its exclusion from traditional credit scoring systems. However, we found little
-rigorous analysis on whether BNPL usage positively, negatively, or neutrally
-affects long-term credit behavior (defaults, credit scores, responsible borrowing).
+### Modeling Approach
 
-### Over-Indebtedness Risk Modeling in BNPL
+We will employ a systems thinking lens to understand the interconnected factors
+influencing default risk. Our modeling process will involve:
 
-Several papers suggest BNPL usage leads to debt overextension, but very few
-provide quantifiable thresholds or methods to flag high-risk users early.
-There's a notable lack of frameworks for early-warning indicators or personalized
-risk profiling.
+- **Data Preparation**: Cleaning and preparing the Lending Club dataset.
+- **Model Training**: Building and training predictive models.
+- **Evaluation**: Assessing model performance using metrics like AUC-ROC.
+- **Interpretation**: Using SHAP to understand the key features driving
+  predictions.
 
-### Summary of Observed Patterns
-
-- BNPL use is rising sharply among young adults with limited financial education.
-- Users frequently hold BNPL balances across multiple platforms without
-- consolidated tracking.
-- Traditional credit systems do not capture BNPL activity, weakening their
-- predictive value.
-- Machine learning approaches can help predict financial stress with higher precision.
-- Explainability tools such as SHAP can provide transparency in model predictions.
+This structured approach will ensure our findings are both statistically robust
+and practically applicable for investors and P2P platforms.
