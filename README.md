@@ -270,11 +270,44 @@ data analysis.
 
 ## 📈 Project Progress
 
-[![Progress](https://img.shields.io/badge/Progress-60%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
+[![Progress](https://img.shields.io/badge/Progress-80%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
 ## 📈 Key Findings
 
-> To be added after the analysis is conducted.
+Our analysis of the Lending Club dataset reveals significant predictors of loan default. By employing a suite of machine learning models, we've identified key financial and behavioral traits that signal heightened credit risk.
+
+### Model Performance
+
+We trained and evaluated three classification models to predict loan default. The models were optimized to handle class imbalance, ensuring that the minority class (defaulted loans) was given appropriate weight. XGBoost emerged as the top-performing model, demonstrating the best balance of precision and recall.
+
+| Model                 | ROC-AUC | Precision (Default) | Recall (Default) | F1-Score (Default) |
+| --------------------- | :-----: | :-----------------: | :--------------: | :----------------: |
+| **XGBoost**           | **0.72**| **0.32**            | **0.67**         | **0.44**           |
+| Logistic Regression   |  0.71   |        0.31         |       0.67       |       0.43         |
+| Random Forest         |  0.71   |        0.55         |       0.06       |       0.10         |
+
+*Performance metrics are reported on the test set.*
+
+### Key Predictors of Default
+
+Feature importance analysis using both Random Forest and XGBoost, complemented by SHAP (SHapley Additive exPlanations) values from the XGBoost model, highlighted several critical factors in predicting loan defaults. The most influential features include:
+
+- **Interest Rate (`int_rate`):** Higher interest rates are strongly correlated with a higher probability of default. This is often the most significant predictor.
+- **Loan Grade and Sub-Grade:** The assigned loan grade (A-G) by the platform is a powerful indicator of risk, with lower grades showing much higher default rates.
+- **FICO Score (`fico_score`):** As expected, lower FICO scores are a primary indicator of credit risk.
+- **Debt-to-Income Ratio (`dti`):** Borrowers with a higher percentage of their income going towards debt payments are more likely to default.
+- **Annual Income (`annual_inc`):** Lower annual income is associated with a higher risk of default.
+- **Loan Amount (`loan_amnt`):** Larger loan amounts can represent a higher risk.
+
+### Visualizing Risk Factors
+
+To better understand the model's decisions, we used SHAP summary plots. These visualizations show the impact of each feature on the prediction for individual loans. For example, a high interest rate pushes the prediction towards default, while a high FICO score pushes it towards repayment.
+
+This provides a transparent view into our model, allowing for interpretable, data-driven lending decisions. Our findings can help investors and platforms better assess risk and improve outcomes in the P2P lending market.
+
+![SHAP Summary Plot](4_data_analysis/figures/shap_summary_plot.png)
+
+*The SHAP summary plot above shows the impact of the top features on the model's output. Each point represents a single loan from the test set. The color indicates the feature's value (red is high, blue is low), and the position on the x-axis shows the feature's impact on the default prediction.*
 
 ## 🤝 Contributing
 
@@ -289,7 +322,7 @@ for details.
 
 [![Quote](https://img.shields.io/badge/Quote-Finance%20%26%20Data-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
-> _"The goal is to turn data into information, and information into insight." -
-> Carly Fiorina_
+> *"The goal is to turn data into information, and information into insight." -
+> Carly Fiorina*
 
 Join us as we make sense — and DataCents — out of information.
