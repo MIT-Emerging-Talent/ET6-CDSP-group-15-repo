@@ -7,6 +7,7 @@ Logistic Regression, Random Forest, and XGBoost.
 
 ## 4.1 Introduction
 
+
 The primary objective of this data analysis phase was to develop robust predictive
 models for identifying loan default risk within the peer-to-peer (P2P) lending
 ecosystem. Leveraging a comprehensive dataset from Lending Club, we aimed to uncover
@@ -41,6 +42,7 @@ Before model training, the raw Lending Club dataset underwent significant
 * **Date-Time Feature Engineering**: The `issue_d` (loan issue date) and
  `earliest_cr_line` (earliest credit line) columns were used to engineer a new
  feature, `credit_history_length`, representing the duration of the borrower's
+
  credit history in months. This was calculated as the difference between
  `issue_d` and `earliest_cr_line`, divided by 30 days.
 * **Categorical Feature Processing**:
@@ -133,6 +135,7 @@ To address the class imbalance, techniques such as class weighting (for
 * **Precision (Class 1)**: 0.32
 * **Recall (Class 1)**: 0.67
 * **F1-score (Class 1)**: 0.44
+
 * **Confusion Matrix**:
 
     ```bash
@@ -164,6 +167,7 @@ To address the class imbalance, techniques such as class weighting (for
     ```
 
 *Conclusion*: Despite applying class weighting, the Random Forest model still
+
  struggled significantly with recall for the default class (only 6%),
   indicating it remained biased towards the majority class. It was very strong
    at predicting non-defaults but failed to detect most actual defaulters.
