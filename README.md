@@ -26,7 +26,8 @@ confidence in the evolving alternative finance ecosystem.
 
 We are on a mission to:
 
-- Build an open, data-driven framework for assessing default risk in P2P lending.
+- Build an open, data-driven framework for assessing default risk in P2P
+  lending.
 - Identify borrower and loan traits most predictive of default.
 - Apply interpretable machine learning to improve credit assessment.
 - Support investors, platforms, and regulators with transparent risk insights.
@@ -38,29 +39,29 @@ Using historical data from Lending Club, we analyze borrower behavior, loan
 characteristics, and repayment outcomes to predict risk.
 
 We train models that balance accuracy with explainability, enabling decisions
-that are both data-backed and transparent. The ultimate goal is to build
-tools that help platforms and investors reduce risk and improve outcomes.
+that are both data-backed and transparent. The ultimate goal is to build tools
+that help platforms and investors reduce risk and improve outcomes.
 
 ---
 
 ## Problem Statement
 
 - P2P platforms offer flexible credit access to millions, yet face a persistent
-challenge: borrower default. Unpaid loans hurt investors, threaten platform
-stability, and erode trust in digital finance.
+  challenge: borrower default. Unpaid loans hurt investors, threaten platform
+  stability, and erode trust in digital finance.
 
 - Conventional credit scoring may miss key behavioral signals. Many borrowers,
-especially younger users, accumulate invisible debt across platforms. Without
-reliable models, lenders can't detect risk early or fairly.
+  especially younger users, accumulate invisible debt across platforms. Without
+  reliable models, lenders can't detect risk early or fairly.
 
 - By studying a large dataset of loan records and repayment history, we aim to
-reveal the hidden indicators of credit default risk and build interpretable
-models for real-world risk prediction.
+  reveal the hidden indicators of credit default risk and build interpretable
+  models for real-world risk prediction.
 
 ### Research Question
 
-What are the key borrower and loan characteristics that best predict default
-risk in peer-to-peer (P2P) lending platforms in the United States?
+> **What are the key borrower and loan characteristics that best predict default
+> risk in peer-to-peer (P2P) lending platforms in the United States?**
 
 ### 🔍 Modeling the Research Question
 
@@ -79,7 +80,8 @@ Our modeling approach includes the following stages:
   demographics, loan purpose, FICO ranges, and installment size.
 
 - **Modeling Techniques**: Use classification models like  
-  Logistic Regression, Random Forest, and XGBoost to estimate default likelihood.
+  Logistic Regression, Random Forest, and XGBoost to estimate default
+  likelihood.
 
 - **Interpretability Tools**: Apply SHAP analysis and feature importance methods
   to explain model decisions and highlight key predictors.
@@ -93,8 +95,7 @@ Our modeling approach includes the following stages:
 
 All datasets are stored in our
 [`/1_datasets/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/1_datasets)
-folder.
-Cleaning and preparation scripts are in
+folder. Cleaning and preparation scripts are in
 [`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation).
 
 The primary dataset used in our analysis is the Lending Club loan dataset, which
@@ -270,15 +271,73 @@ data analysis.
 
 ## 📈 Project Progress
 
-[![Progress](https://img.shields.io/badge/Progress-60%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
+[![Progress](https://img.shields.io/badge/Progress-80%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
 ## 📈 Key Findings
 
-> To be added after the analysis is conducted.
+Our analysis of the Lending Club dataset reveals significant predictors of loan
+default. By employing a suite of machine learning models, we've identified key
+financial and behavioral traits that signal heightened credit risk.
+
+### Model Performance
+
+We trained and evaluated three classification models to predict loan default.
+The models were optimized to handle class imbalance, ensuring that the minority
+class (defaulted loans) was given appropriate weight. XGBoost emerged as the
+top-performing model, demonstrating the best balance of precision and recall.
+
+| Model               | ROC | Prec (Def) | Rec (Def) | F1 (Def) |
+|---------------------|:---:|:----------:|:---------:|:--------:|
+| **XGBoost**         |.72  |   0.32     |   0.67    |  0.44    |
+| Logistic Regression |.71  |   0.31     |   0.67    |  0.43    |
+| Random Forest       |.71  |   0.55     |   0.06    |  0.10    |
+
+_Performance metrics are reported on the test set._
+
+### Key Predictors of Default
+
+Feature importance analysis using both Random Forest and XGBoost, complemented
+by SHAP (SHapley Additive exPlanations) values from the XGBoost model,
+highlighted several critical factors in predicting loan defaults. The most
+influential features include:
+
+- **Interest Rate (`int_rate`):** Higher interest rates are strongly correlated
+  with a higher probability of default. This is often the most significant
+  predictor.
+- **Loan Grade and Sub-Grade:** The assigned loan grade (A-G) by the platform is
+  a powerful indicator of risk, with lower grades showing much higher default
+  rates.
+- **FICO Score (`fico_score`):** As expected, lower FICO scores are a primary
+  indicator of credit risk.
+- **Debt-to-Income Ratio (`dti`):** Borrowers with a higher percentage of their
+  income going towards debt payments are more likely to default.
+- **Annual Income (`annual_inc`):** Lower annual income is associated with a
+  higher risk of default.
+- **Loan Amount (`loan_amnt`):** Larger loan amounts can represent a higher
+  risk.
+
+### Visualizing Risk Factors
+
+To better understand the model's decisions, we used SHAP summary plots. These
+visualizations show the impact of each feature on the prediction for individual
+loans. For example, a high interest rate pushes the prediction towards default,
+while a high FICO score pushes it towards repayment.
+
+This provides a transparent view into our model, allowing for interpretable,
+data-driven lending decisions. Our findings can help investors and platforms
+better assess risk and improve outcomes in the P2P lending market.
+
+![SHAP Summary Plot](4_data_analysis/figures/shap_summary_plot.png)
+
+_The SHAP summary plot above shows the impact of the top features on the model's
+output. Each point represents a single loan from the test set. The color
+indicates the feature's value (red is high, blue is low), and the position on
+the x-axis shows the feature's impact on the default prediction._
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for
+guidelines.
 
 ## 📝 License
 
