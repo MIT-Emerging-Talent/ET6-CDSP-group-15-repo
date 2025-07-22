@@ -8,7 +8,7 @@
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=40&pause=1000&color=2196F3&center=true&vCenter=true&width=600&height=100&lines=Welcome+to+DataCents!;Where+Data+Meets+Finance)
 
-## 🔍 Key Takeaway
+## 🔍 Research Conclusions
 
 After exploring millions of loan records from Lending Club, we found that people
 with higher interest rates, lower credit scores (FICO), and worse loan grades are
