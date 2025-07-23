@@ -1,301 +1,120 @@
-# 4. Data Analysis
+# P2P Loan Default Prediction: Model Training & Evaluation
 
-This section details the comprehensive data analysis performed on the Lending Club
-dataset to predict loan default risk. It covers the methodologies, model evaluations,
-and key findings from the application of various machine learning models, including
-Logistic Regression, Random Forest, and XGBoost.
+This directory contains the Jupyter notebooks used to train, evaluate, and tune
+ machine learning models for predicting loan defaults on the Lending Club
+ dataset. Each notebook represents a complete workflow, from data preprocessing
+ to model performance analysis.
 
-## 4.1 Introduction
+## Notebooks Overview
 
-The primary objective of this data analysis phase was to develop robust predictive
-models for identifying loan default risk within the peer-to-peer (P2P) lending
-ecosystem. Leveraging a comprehensive dataset from Lending Club, we aimed to uncover
-the key borrower and loan characteristics that best predict default outcomes. This
-analysis is crucial for improving credit assessment, informing smarter lending
-decisions, and enhancing investor confidence in alternative finance platforms. The
-insights derived from this phase are intended to support platforms, investors, and
-regulators with transparent and data-backed risk insights.
+### 1. `07_p2p_lending_(logreg,RF,XGB).ipynb`
 
-## 4.2 Data Preparation and Feature Engineering
+- **Purpose:** This notebook provides an end-to-end workflow, including
+ extensive data cleaning, feature engineering, and model training. It uses
+  **class weighting** to handle the imbalanced nature of the dataset.
+- **Data Source:** Raw data (`accepted_2007_to_2018Q4.csv.gz`) downloaded
+   directly from [Kaggle Hub](https://www.kaggle.com/datasets/wordsforthewise/lending-club).
+- **Output:** A tuned XGBoost model saved as `xgb_final_model.pkl`.
 
-Before model training, the raw Lending Club dataset underwent significant
- data preparation and feature engineering to ensure data quality
-  and create meaningful variables for analysis. The initial dataset
-   contained over 2 million loans with 151 features. Key steps included:
+#### Workflow Summary for `07_p2p_lending_(logreg,RF,XGB).ipynb`
 
-* **Filtering Relevant Columns**: Only columns deemed relevant to the research
- question, such as `loan_amnt`, `term`, `int_rate`, `grade`, `purpose`
- , `annual_inc`, `dti`, `delinq_2yrs`, `inq_last_6mths`, `home_ownership`,
- `emp_length`, `issue_d`, `earliest_cr_line`, `open_acc`, `pub_rec`,
- `revol_bal`, `revol_util`, `total_acc`, `verification_status`, and
- `application_type`, were selected. The target variable, `loan_status`,
- was also included.
-* **Target Variable Transformation**: The `loan_status` column was transformed
- into a binary target variable, `is_default`, where 'Charged Off' and 'Default'
- statuses were mapped to 1 (default), and other statuses (e.g., 'Fully Paid')
- were mapped to 0 (non-default). Loans without a resolved outcome were excluded
- from the analysis.
-* **Handling Missing Values**: Missing values were addressed by imputing
- numerical columns with their mean and categorical columns with their mode.
- This ensured that all features were complete for model training.
-* **Date-Time Feature Engineering**: The `issue_d` (loan issue date) and
- `earliest_cr_line` (earliest credit line) columns were used to engineer a new
- feature, `credit_history_length`, representing the duration of the borrower's
- credit history in months. This was calculated as the difference between
- `issue_d` and `earliest_cr_line`, divided by 30 days.
-* **Categorical Feature Processing**:
-  * Leading/trailing white spaces were stripped from object-type columns.
-  * The `emp_length` (employment length) column was cleaned and converted to a
-   numerical format.
-  * The `home_ownership` categories 'ANY', 'OTHER', and 'NONE' were grouped
-   into 'OTHER' to simplify the feature.
-  * The top 5 most frequent `purpose` categories were identified, and less
-   frequent categories were grouped into 'other'. One-hot encoding was then
-   applied to the `purpose` column to convert it into numerical features.
+1. **Data Loading & Filtering:**
+    - Loads the complete raw dataset from Kaggle Hub.
+    - Selects a subset of 24 relevant features for the initial analysis.
 
-These steps were crucial in preparing a clean and well-structured dataset for
- the subsequent machine learning modeling. The final dataset used for modeling
-  consisted of 1,345,350 resolved loans with 23 features, including the
- `is_default` target variable.
+2. **Target Variable Engineering:**
+    - Defines "bad" loan statuses (`Charged Off`, `Default`) to create the
+   binary target variable `is_default`.
+    - Filters the dataset to only include loans with resolved outcomes
+   (`Fully Paid`, `Charged Off`, `Default`), removing active loans.
 
-## 4.3 Model Evaluation
+3. **Feature Engineering & Preprocessing:**
+    - **Categorical Encoding:**
+        - `verification_status` is converted into a binary `is_verified` feature.
+        - `home_ownership` and `grade` are one-hot encoded.
+        - `purpose` is consolidated into the top 5 categories plus an "other"
+   category before one-hot encoding.
+        - `application_type` is mapped to binary values (0 for Individual, 1
+   for Joint App).
+    - **Numerical & Date Cleaning:**
+        - `term` is cleaned from string format (e.g., "36 months") to an
+   integer (36).
+        - `emp_length` is converted from string to a numerical scale, handling
+   special cases like `< 1 year` and `10+ years`.
+        - `credit_history_length` is engineered by calculating the time between
+   the loan `issue_d` and the `earliest_cr_line`.
+    - **Final Touches:** All object-type columns are stripped of
+   leading/trailing whitespaces, and unnecessary columns like `addr_state` are dropped.
 
-Three classification models—Logistic Regression, Random Forest, and
- XGBoost—were employed to predict loan default. The models were evaluated based
- on several key metrics, including Accuracy, Precision, Recall, F1-score, and
- ROC AUC Score. Given the inherent class imbalance in loan default datasets
- (significantly fewer defaults than non-defaults), special attention was paid
- to metrics that are robust to imbalance, particularly Recall for the default
- class and ROC AUC.
+4. **Model Training & Evaluation:**
+    - **Models:** Trains and evaluates Logistic Regression and XGBoost models.
+   *Note: A Random Forest model is initialized but commented out in the final run.*
+    - **Imbalance Handling:** Uses the `class_weight="balanced"` and
+   `scale_pos_weight` parameters to address the class imbalance during training.
+    - **Evaluation:** Performance is measured using Classification Reports,
+   Confusion Matrices, ROC-AUC curves, and Precision-Recall curves.
 
-### 4.3.1 Initial Model Performance (Before Class Balancing)
+5. **Hyperparameter Tuning & Feature Importance:**
+    - **Tuning:** `RandomizedSearchCV` is used to find the optimal
+   hyperparameters for the XGBoost model based on the ROC-AUC score.
+    - **Feature Importance:** The final tuned XGBoost model is analyzed
+   with **SHAP (SHapley Additive exPlanations)** to identify the most
+   influential features in predicting loan defaults.
 
-Initially, all models exhibited high overall accuracy (around 80%) but
- struggled to correctly identify the minority class (defaults). This is a
- common issue in imbalanced datasets, where models tend to be biased towards
- the majority class.
+---
 
-#### Logistic Regression
+### 2. `modeling-2.ipynb`
 
-| Metric                | Value   | Notes                                       |
-| :-------------------- | :------ | :-------------------------------------------|
-| Accuracy   | ~80%    | Looks high, but can be misleading due to class imbalance|
-| Precision (Class 0)   | 0.81    | Model is usually correct when predicting no-default|
-| Recall (Class 0)      | 0.99    | Catches nearly all no-defaults             |
-| Precision (Class 1)   | 0.55    | Only 55% of predicted defaults are actually defaults|
-| Recall (Class 1) | 0.05 | Misses 95% of actual defaults|
-| ROC AUC Score   | ~0.66   | Some ability to distinguish classes, but not great|
-| Confusion Matrix      | 📉 Imbalanced | Many false negatives (missed defaults)|
+- **Purpose:** This notebook focuses on model training and evaluation using
+ a different strategy for handling class imbalance: **downsampling**. It starts
+  with an already cleaned dataset.
+- **Data Source:** Pre-cleaned data (`clean_lendingclub_data.csv`) downloaded
+   from a Google Drive link.
+- **Output:** Comparative analysis and visualizations of model performance.
 
-*Conclusion*: The Logistic Regression model was heavily biased towards
- predicting non-defaults, resulting in a very low recall for the default class.
+#### Workflow Summary for `modeling.ipynb`
 
-#### Random Forest
+1. **Data Loading:**
+    - Loads a pre-cleaned dataset, bypassing the extensive feature engineering
+   steps seen in the other notebook.
 
-| Metric                | Value   | Notes                                     |
-| :-------------------- | :------ | :-------------------------------------------|
-| Accuracy              | ~80%    | Same as logistic regression             |
-| Precision (Class 0)   | 0.81    | Still good at predicting no-defaults   |
-| Recall (Class 0)      | 0.99    | Similar to logistic regression    |
-| Precision (Class 1)   | 0.55| Same as logistic regression  |
-| Recall (Class 1)      | 0.06    | Slightly better than logistic regression|
-| ROC AUC Score         | ~0.70   | Better at separating the classes than LR |
-| Confusion Matrix      | 📉 Imbalanced | Still many false negatives, < LR|
+2. **Imbalance Handling:**
+    - Applies **downsampling** by taking a random sample of the majority class
+   (non-defaults) to match the number of samples in the minority class
+    (defaults), creating a balanced training set.
 
-*Conclusion*: Random Forest showed a marginal improvement in ROC AUC but still
-suffered from poor recall for the default class. This indicates a persistent
-bias towards the majority class.
+3. **Preprocessing:**
+    - Splits the data into 80% training and 20% testing sets using
+   stratification to maintain class balance.
+    - Handles missing values using `SimpleImputer` and scales numerical
+   features with `StandardScaler`.
 
-#### XGBoost
+4. **Model Training & Evaluation:**
+    - **Models:** Trains and evaluates three models: **Logistic Regression**,
+   **Random Forest**, and **XGBoost**.
+    - **Evaluation:** Compares the models based on:
+        - Classification Reports and Confusion Matrices.
+        - ROC-AUC and Precision-Recall curves.
+        - A final summary bar chart visualizing the performance across all key metrics.
 
-| Metric                | Value   | Notes                                    |
-| :-------------------- | :------ | :---------------------------------------|
-| Precision (Class 1)   | 0.56    | 56% of prediction accuracy|
-| Recall (Class 1)      | 0.09    | Only 9% of actual defaults correctly got|
-| F1-score (Class 1)    | 0.16    | Low, poor balance between precision and recall|
-| Overall Accuracy      | 0.80    | Biased due to class imbalance            |
-| ROC AUC Score         | 0.72    | Decent discrimination ability, best so far|
+5. **Hyperparameter Tuning:**
+    - Demonstrates hyperparameter tuning for the XGBoost model using both
+   `GridSearchCV` and `RandomizedSearchCV` to find the best parameters and
+    improve the AUC score.
 
-*Conclusion*: XGBoost performed the best among the initial models in terms of
- ROC AUC, showing a better ability to distinguish between classes, though
-  recall for defaults remained low.
+---
 
-### 4.3.2 Model Performance After Class Balancing
+### Summary of Approaches
 
-To address the class imbalance, techniques such as class weighting (for
- Logistic Regression and Random Forest) and `scale_pos_weight` (for XGBoost)
-  were applied. The objective was to improve the recall of the minority class
- (loan defaults) without excessively compromising precision.
+| Feature     | `07_p2p_lending_(logreg,RF,XGB).ipynb`  | `modeling-2.ipynb`  |
+| ---------------------- | -------- | --------- |
+| **Data Source** | Raw data from Kaggle Hub |Pre-cleaned CSV from Google Drive |
+| **Data Preparation** | Cleaning and feature engineering| mostly cleaned data |
+| **Imbalance Handling** |**Class Weighting**| **Downsampling** of majority class|
+| **Models Trained** | Logistic Regression, XGBoost| Same + XGBoost|
+| **Hyperparameter Tuning** | `RandomizedSearchCV` for XGBoost | Same + `GridSearchCV`|
 
-#### Logistic Regression (with class weighting)
-
-* **Accuracy**: 0.65
-* **Precision (Class 1)**: 0.32
-* **Recall (Class 1)**: 0.67
-* **F1-score (Class 1)**: 0.44
-
-* **Confusion Matrix**:
-
-    ```bash
-    [[139796  75477]
-     [ 17555  36147]]
-    ```
-
-  * **True Negatives (TN)**: 139,796 (Correctly predicted not default)
-  * **False Positives (FP)**: 75,477 (Predicted default but were not)
-  * **False Negatives (FN)**: 17,555 (Missed actual defaulters ❌)
-  * **True Positives (TP)**: 36,147 (Correctly predicted defaulters ✅)
-
-*Conclusion*: This model showed strong recall (67%) for defaults, which is
- critical for risk prediction. However, it also resulted in a high number of
-  false positives, meaning many non-defaulting loans were wrongly flagged as risky.
-
-#### Random Forest (with `class_weight="balanced"`)
-
-* **Accuracy**: 0.80
-* **Precision (Class 1)**: 0.55
-* **Recall (Class 1)**: 0.06
-* **F1-score (Class 1)**: 0.11
-* **ROC AUC Score**: 0.705
-* **Confusion Matrix**:
-
-    ```bash
-    [[212579   2694]
-     [ 50408   3294]]
-    ```
-
-*Conclusion*: Despite applying class weighting, the Random Forest model still
-
- struggled significantly with recall for the default class (only 6%),
-  indicating it remained biased towards the majority class. It was very strong
-   at predicting non-defaults but failed to detect most actual defaulters.
-
-#### XGBoost (with `scale_pos_weight`)
-
-* **Accuracy**: 0.65
-* **Precision (Class 1)**: 0.32
-* **Recall (Class 1)**: 0.67
-* **F1-score (Class 1)**: 0.44
-* **ROC AUC Score**: 0.723
-* **Confusion Matrix**:
-
-    ```bash
-    [[139796  75477]
-     [ 17555  36147]]
-    ```
-
-*Conclusion*: XGBoost, with `scale_pos_weight`, matched Logistic Regression in
- achieving high recall (67%) for defaults. It also demonstrated a slightly
-  better ROC AUC score (0.723), suggesting superior overall class separation
-   compared to Logistic Regression after balancing.
-
-### 4.3.3 Hyperparameter Tuning (XGBoost)
-
-Further optimization was performed on the XGBoost model using hyperparameter
- tuning to enhance its performance. Both GridSearchCV and RandomizedSearchCV
-  were utilized.
-
-#### GridSearchCV Best Parameters
-
-```json
-{
-    'learning_rate': 0.1,
-    'max_depth': 5,
-    'n_estimators': 100,
-    'scale_pos_weight': 4.008668246379308
-}
-```
-
-* `learning_rate=0.1`: Controls the step size shrinkage to prevent overfitting.
-* `max_depth=5`: Limits the depth of each tree, balancing complexity and performance.
-* `n_estimators=100`: Number of boosting rounds (trees).
-* `scale_pos_weight=4.01`: Addresses class imbalance by giving more weight to
- the minority class.
-
-#### Performance Metrics on Test Set (after GridSearchCV tuning)
-
-* **Accuracy**: 65%
-* **Precision (Class 1)**: 32%
-* **Recall (Class 1)**: 68% (Good, caught 68% of actual defaulters)
-* **F1-score (Class 1)**: 43%
-* **ROC AUC Score**: 0.647
-
-#### Confusion Matrix (after GridSearchCV tuning)
-
-```bash
-  ------------ ---------------------- -------------------
-               Predicted No Default   Predicted Default
-  Actual No    137,919 (TN)           77,354 (FP)
-  Actual Yes   17,321 (FN)            36,381 (TP)
-  ------------ ---------------------- -------------------
-```
-
-* **True Positives (TP)**: 36,381 (Correctly caught defaulters)
-* **False Positives (FP)**: 77,354 (Wrongly marked as default)
-* **False Negatives (FN)**: 17,321 (Missed defaults)
-
-*Key Takeaway*: The tuned XGBoost model achieved high recall (68%) for
- defaults, which is crucial for risk prediction, but at the cost of higher
- false positives.
-
-#### RandomizedSearchCV Best Parameters
-
-```json
-{
-    'colsample_bytree': 0.6923,
-    'learning_rate': 0.0823,
-    'max_depth': 6,
-    'n_estimators': 298,
-    'subsample': 0.8440
-}
-```
-
-* `colsample_bytree=0.69`: Uses ~69% of features per tree to prevent overfitting.
-* `learning_rate=0.082`: Slower, more precise learning.
-* `max_depth=6`: Allows trees to grow deeper, balancing complexity.
-* `n_estimators=298`: More trees in the ensemble for better accuracy.
-* `subsample=0.84`: Uses 84% of training samples per tree to reduce overfitting.
-
-*Best Score (AUC)*: 0.7219
-
-*Conclusion*: RandomizedSearchCV yielded an XGBoost model with an AUC of 0.
-7219, indicating a strong ability to distinguish between defaults an
- non-defaults, performing significantly better than random guessing.
-
-## 4.4 Key Takeaways and Conclusion
-
-### Key Takeaways
-
-* **High Recall for Defaults**: Both Logistic Regression and XGBoost, after
- applying class balancing techniques, achieved high recall (around 67-68%) on
-  the default class. This is critical for credit risk prediction, where
-   identifying potential defaulters is paramount.
-* **Trade-off with False Positives**: The improved recall often came with a
- trade-off: an increase in false positives (i.e., borrowers wrongly flagged as
-  risky). This is a common challenge in imbalanced classification problems.
-* **Random Forest's Performance**: Even with class weighting, Random Forest
-   struggled to effectively detect the minority class, performing exceptionally
-    well on the majority class but failing to identify most actual defaulters.
-* **XGBoost as the Best Performer**: XGBoost consistently demonstrated the best
-   overall performance, particularly in terms of ROC AUC score (up to 0.723
-   after balancing and 0.7219 after RandomizedSearchCV tuning). This indicates
-    its superior ability to distinguish between defaulting and non-defaulting loans.
-
-### Conclusion
-
-In the context of P2P lending default prediction, where the cost of missing a
- defaulter (false negative) is typically higher than wrongly flagging a
-  non-defaulter (false positive), models with high recall for the default class
-   are preferred. After comprehensive analysis and hyperparameter tuning, the
-    **XGBoost model** emerged as the most effective solution. Its ability to
-     achieve a high recall for the default class while maintaining a strong ROC
-      AUC score makes it a robust choice for identifying and mitigating credit
- risk in P2P lending platforms. While a balance between precision and recall is
-  always sought, the emphasis on recall for this specific problem makes XGBoost
-   and, to a lesser extent, Logistic Regression, more suitable than Random
-    Forest for this application.
-
-## 4.5 Visualizations
+## Visualizations
 
 Here are some visualizations to illustrate key concepts and model performance:
 
