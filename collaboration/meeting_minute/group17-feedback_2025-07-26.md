@@ -11,7 +11,7 @@
 - Excellent use of the iceberg model for problem framing and depth.  
 - Clean and intuitive README with thoughtful structure and dropdown menus.  
 - Good application of research strategy with clear objectives and motivation.  
-- Notable effort in handling two distinct datasets under challenging conditions.
+- Notable effort in handling two distinct datasets under challenging conditions
 
 ---
 
