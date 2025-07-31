@@ -8,6 +8,15 @@
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=40&pause=1000&color=2196F3&center=true&vCenter=true&width=600&height=100&lines=Welcome+to+DataCents!;Where+Data+Meets+Finance)
 
+## 🔍 Key Takeaway
+
+After exploring millions of loan records from Lending Club, we found that people
+with higher interest rates, lower credit scores (FICO), and worse loan grades are
+way more likely to default. Among the models we tested, XGBoost worked best at
+predicting this, with a ROC AUC of 0.72 — not perfect, but pretty solid.
+
+---
+
 ## About Our Team
 
 **DataCents** is a collaborative research team using data science to decode
@@ -101,12 +110,12 @@ folder. Cleaning and preparation scripts are in
 The primary dataset used in our analysis is the Lending Club loan dataset, which
 includes over 2 million loans with borrower traits and repayment outcomes.
 
-**Key dataset features include:**
+Key Features:
 
-- Borrower attributes: employment length, annual income, FICO scores
-- Loan details: loan amount, term, purpose, interest rate, installment amount
-- Credit history: earliest credit line, delinquencies, open accounts
-- Loan outcome: loan status (fully paid, charged-off, default)
+- Borrower: employment length, income, FICO score
+- Loan: amount, term, purpose, interest rate
+- Credit history: earliest credit line, open accounts, delinquencies
+- Outcome: loan status (fully paid, charged-off)
 
 ## 👥 Meet the Team
 
@@ -333,6 +342,24 @@ _The SHAP summary plot above shows the impact of the top features on the model's
 output. Each point represents a single loan from the test set. The color
 indicates the feature's value (red is high, blue is low), and the position on
 the x-axis shows the feature's impact on the default prediction._
+
+---
+
+### ⚠️ Limitations
+
+- The data is from 2007–2018, so a lot has changed since then (especially after COVID).
+- There’s still class imbalance — even with reweighting, predicting default is hard.
+
+---
+
+### 🔭 What Could Be Done Next
+
+- Try time-series models to predict default earlier in the loan cycle.
+- Test the model on more recent data or on another P2P platform.
+- Study if the models show bias (e.g., by demographic).
+- Build a web tool or dashboard for lenders to test real loans.
+
+---
 
 ## 🤝 Contributing
 
