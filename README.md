@@ -251,6 +251,12 @@ Our repository is organized into key sections:
 - `/5_communication_strategy/` - How we share our findings
 - `/6_final_presentation/` - Final project presentation
 
+### 🌐 Explore Our Project Online
+
+We also built an interactive project website where you can explore our findings,
+visualizations, and methodology in a more accessible format.  
+👉 **Visit here:** [DataCents Project Website](https://dadishimwe.github.io/datacents/)
+
 ## 🚀 Getting Started
 
 1. Clone and setup
@@ -287,6 +293,16 @@ data analysis.
 Our analysis of the Lending Club dataset reveals significant predictors of loan
 default. By employing a suite of machine learning models, we've identified key
 financial and behavioral traits that signal heightened credit risk.
+
+### 🆕 Additional Features
+
+#### Risk Score Notebook
+
+In addition to the core analysis, we developed a **Risk Score** feature in the  
+[`risk_scoring.ipynb`](4_data_analysis/notebooks/risk_scoring.ipynb)
+notebook. This tool calculates a custom risk score for each borrower using the
+trained model outputs and key predictive features, helping to quickly flag
+high-risk loans.
 
 ### Model Performance
 
