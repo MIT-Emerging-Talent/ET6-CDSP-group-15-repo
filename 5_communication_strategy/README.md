@@ -58,3 +58,6 @@ that explain the project in accessible terms. Focus on different angles, such as
 "How AI Can Make Lending Fairer" or "The Top 5 Predictors of Loan Default."
   - o *Webinar/Online Talk*: Host a session where you walk through the project and
 answer questions from the community.
+  - o *[Website](https://dadishimwe.github.io/datacents/)*: create a website for
+the any visitor to get a brief, illustrated, easy to read, and clear description
+of the research project.
