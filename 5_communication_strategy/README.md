@@ -139,9 +139,8 @@ is our central hub. It already presents the key takeaway, the team, and the
 problem. We will ensure it prominently features links to:
 
 - The [GitHub Repo](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo.git)
-for technical
-  validation
-- The *Technical White Paper* for in-depth analysis
+for technical validation
+- The *Technical Paper* for in-depth analysis
 
 [Back to Top](#datacents-audience--communication-strategy)
 
@@ -152,12 +151,9 @@ for technical
 **Join Key Groups:** We will join the professional networks where our target
 audience is active:
 
-- [Credit Risk Management Professionals Network](
-  https://www.linkedin.com/groups/8943675/)
-- [FinTech Professionals Network](
-  https://www.linkedin.com/groups/8820573/)
-- [Peer-to-Peer Lending Professionals](
-  https://www.linkedin.com/groups/7469353/)
+- [Credit Risk Management Professionals Network](https://www.linkedin.com/groups/8943675/)
+- [FinTech Professionals Network](https://www.linkedin.com/groups/8820573/)
+- [Peer-to-Peer Lending Professionals](https://www.linkedin.com/groups/7469353/)
 
 **Share Valuable Content:**
 
