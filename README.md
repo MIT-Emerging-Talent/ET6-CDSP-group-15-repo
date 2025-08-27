@@ -1,4 +1,4 @@
-# 💰 DataCents: Decoding Financial Patterns
+# <img src="assets/logo.png" alt="DataCents Logo" width="110" height="105" style="vertical-align: middle; margin-right: 5px;"> <span style="color: #ffd200;">Decoding Financial Patterns</span>
 
 [![DataCents Finance Analytics](https://img.shields.io/badge/DataCents-Finance%20Analytics-2196F3?style=for-the-badge&logo=python&logoColor=white)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
@@ -6,9 +6,9 @@
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=40&pause=1000&color=2196F3&center=true&vCenter=true&width=600&height=100&lines=Welcome+to+DataCents!;Where+Data+Meets+Finance)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=40&pause=1000&color=ffd200&center=true&vCenter=true&width=600&height=100&lines=Welcome+to+DataCents!;Where+Data+Meets+Finance)
 
-## 🔍 Key Takeaway
+## <span style="color: #ffd200;">🔍 Main Findings</span>
 
 After exploring millions of loan records from Lending Club, we found that people
 with higher interest rates, lower credit scores (FICO), and worse loan grades are
@@ -17,7 +17,7 @@ predicting this, with a ROC AUC of 0.72 — not perfect, but pretty solid.
 
 ---
 
-## About Our Team
+## <span style="color: #ffd200;">About Our Team</span>
 
 **DataCents** is a collaborative research team using data science to decode
 credit risk in peer-to-peer (P2P) lending platforms.
@@ -27,9 +27,7 @@ to identify the strongest predictors of loan default. Our goal is to improve
 credit assessment, inform smarter lending decisions, and enhance investor
 confidence in the evolving alternative finance ecosystem.
 
----
-
-### Our Mission
+### <span style="color: #ffd200;">Our Mission</span>
 
 [![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
@@ -41,19 +39,9 @@ We are on a mission to:
 - Apply interpretable machine learning to improve credit assessment.
 - Support investors, platforms, and regulators with transparent risk insights.
 
-## Research Aim
-
-Our aim is to uncover the key drivers of default risk in P2P lending systems.
-Using historical data from Lending Club, we analyze borrower behavior, loan
-characteristics, and repayment outcomes to predict risk.
-
-We train models that balance accuracy with explainability, enabling decisions
-that are both data-backed and transparent. The ultimate goal is to build tools
-that help platforms and investors reduce risk and improve outcomes.
-
 ---
 
-## Problem Statement
+## <span style="color: #ffd200;">Problem Statement</span>
 
 - P2P platforms offer flexible credit access to millions, yet face a persistent
   challenge: borrower default. Unpaid loans hurt investors, threaten platform
@@ -67,17 +55,65 @@ that help platforms and investors reduce risk and improve outcomes.
   reveal the hidden indicators of credit default risk and build interpretable
   models for real-world risk prediction.
 
-### Research Question
+### <span style="color: #ffd200;">Research Question</span>
 
 > **What are the key borrower and loan characteristics that best predict default
 > risk in peer-to-peer (P2P) lending platforms in the United States?**
 
-### 🔍 Modeling the Research Question
+## <span style="color: #ffd200;">Research Aim</span>
+
+Our aim is to uncover the key drivers of default risk in P2P lending systems.
+Using historical data from Lending Club, we analyze borrower behavior, loan
+characteristics, and repayment outcomes to predict risk.
+
+We train models that balance accuracy with explainability, enabling decisions
+that are both data-backed and transparent. The ultimate goal is to build tools
+that help platforms and investors reduce risk and improve outcomes.
+
+## <span style="color: #ffd200;">🔍 Research Focus</span>
+
+Our project explores the intersection of behavioral finance and machine
+learning, with a focus on peer-to-peer (P2P) credit risk prediction. We aim to:
+
+- Identify key borrower and loan features linked to default outcomes
+- Build predictive models using Lending Club loan performance data
+- Analyze behavioral and demographic traits influencing credit risk
+- Apply feature importance tools to surface critical default indicators
+- Support fairer, data-driven credit assessment in alternative lending
+
+---
+
+## <span style="color: #ffd200;">📁 Datasets Used</span>
+
+All datasets are stored in our
+[`/1_datasets/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/1_datasets)
+folder. Cleaning and preparation scripts are in
+[`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation).
+
+The primary dataset used in our analysis is the Lending Club loan dataset, which
+includes over 2 million loans with borrower traits and repayment outcomes.
+
+**Key Features:**
+
+- Borrower: employment length, income, FICO score
+- Loan: amount, term, purpose, interest rate
+- Credit history: earliest credit line, open accounts, delinquencies
+- Outcome: loan status (fully paid, charged-off)
+
+## <span style="color: #ffd200;">🛠️ Technical Stack</span>
+
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
+[![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white)](https://matplotlib.org)
+
+### <span style="color: #ffd200;">🔍 Modeling the Research Question</span>
 
 To address our research question, we analyze Lending Club data to identify the
 borrower and loan features that best predict default risk.
 
-Our modeling approach includes the following stages:
+**Our modeling approach includes:**
 
 - **Data Cleaning**: Filter loans with known outcomes, remove anomalies, and
   handle missing values for consistent analysis.
@@ -100,24 +136,118 @@ Our modeling approach includes the following stages:
 
 ---
 
-## 📁 Datasets Used
+## <span style="color: #ffd200;">📈 Key Findings</span>
 
-All datasets are stored in our
-[`/1_datasets/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/1_datasets)
-folder. Cleaning and preparation scripts are in
-[`/2_data_preparation/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/2_data_preparation).
+Our analysis of the Lending Club dataset reveals significant predictors of loan
+default. By employing a suite of machine learning models, we've identified key
+financial and behavioral traits that signal heightened credit risk.
 
-The primary dataset used in our analysis is the Lending Club loan dataset, which
-includes over 2 million loans with borrower traits and repayment outcomes.
+### <span style="color: #ffd200;">Model Performance</span>
 
-Key Features:
+We trained and evaluated three classification models to predict loan default.
+The models were optimized to handle class imbalance, ensuring that the minority
+class (defaulted loans) was given appropriate weight. XGBoost emerged as the
+top-performing model, demonstrating the best balance of precision and recall.
 
-- Borrower: employment length, income, FICO score
-- Loan: amount, term, purpose, interest rate
-- Credit history: earliest credit line, open accounts, delinquencies
-- Outcome: loan status (fully paid, charged-off)
+| Model               | ROC | Prec (Def) | Rec (Def) | F1 (Def) |
+|---------------------|:---:|:----------:|:---------:|:--------:|
+| **XGBoost**         |.72  |   0.32     |   0.67    |  0.44    |
+| Logistic Regression |.71  |   0.31     |   0.67    |  0.43    |
+| Random Forest       |.71  |   0.55     |   0.06    |  0.10    |
 
-## 👥 Meet the Team
+*Performance metrics are reported on the test set.*
+
+### <span style="color: #ffd200;">Key Predictors of Default</span>
+
+Feature importance analysis using both Random Forest and XGBoost, complemented
+by SHAP (SHapley Additive exPlanations) values from the XGBoost model,
+highlighted several critical factors in predicting loan defaults. The most
+influential features include:
+
+- **Interest Rate (`int_rate`):** Higher interest rates are strongly correlated
+  with a higher probability of default. This is often the most significant
+  predictor.
+- **Loan Grade and Sub-Grade:** The assigned loan grade (A-G) by the platform is
+  a powerful indicator of risk, with lower grades showing much higher default
+  rates.
+- **FICO Score (`fico_score`):** As expected, lower FICO scores are a primary
+  indicator of credit risk.
+- **Debt-to-Income Ratio (`dti`):** Borrowers with a higher percentage of their
+  income going towards debt payments are more likely to default.
+- **Annual Income (`annual_inc`):** Lower annual income is associated with a
+  higher risk of default.
+- **Loan Amount (`loan_amnt`):** Larger loan amounts can represent a higher
+  risk.
+
+### <span style="color: #ffd200;">Visualizing Risk Factors</span>
+
+To better understand the model's decisions, we used SHAP summary plots. These
+visualizations show the impact of each feature on the prediction for individual
+loans. For example, a high interest rate pushes the prediction towards default,
+while a high FICO score pushes it towards repayment.
+
+This provides a transparent view into our model, allowing for interpretable,
+data-driven lending decisions. Our findings can help investors and platforms
+better assess risk and improve outcomes in the P2P lending market.
+
+![SHAP Summary Plot](4_data_analysis/figures/shap_summary_plot.png)
+
+*The SHAP summary plot above shows the impact of the top features on the model's
+output. Each point represents a single loan from the test set. The color
+indicates the feature's value (red is high, blue is low), and the position on
+the x-axis shows the feature's impact on the default prediction.*
+
+---
+
+## <span style="color: #ffd200;">📊 Communication Strategy & Final Artifact</span>
+
+To share our insights with regulators and researchers, we built the **DataCents Default Risk Dashboard** - an interactive web application powered by our XGBoost model trained on over 2 million loan records.
+
+**Key Features:**
+
+- **Instant Risk Scoring**: Enter loan details for immediate risk assessment
+- **Transparent Analysis**: SHAP-based explanations of key factors
+- **Interactive Testing**: Modify parameters to explore different scenarios
+- **User-Friendly Interface**: Accessible design for all stakeholders
+
+[**🚀 Try the DataCents Dashboard**](https://datacents2.vercel.app/)
+
+📋 **For detailed communication strategy documentation, visit** [`/5_communication_strategy/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/5_communication_strategy)
+
+---
+
+## <span style="color: #ffd200;">📁 Project Structure</span>
+
+Our repository is organized into key sections:
+
+- `/0_domain_study/` - Financial domain research and background
+- `/1_datasets/` - Financial datasets and market data
+- `/2_data_preparation/` - Data cleaning and preprocessing scripts
+- `/3_data_exploration/` - Initial data analysis and visualization
+- `/4_data_analysis/` - Advanced analysis and modeling
+- `/5_communication_strategy/` - How we share our findings
+- `/6_final_presentation/` - Final project presentation
+
+## <span style="color: #ffd200;">📈 Project Progress</span>
+
+[![Progress](https://img.shields.io/badge/Progress-80%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
+
+---
+
+### <span style="color: #ffd200;">⚠️ Limitations</span>
+
+- The data is from 2007–2018, so a lot has changed since then (especially after COVID).
+- There's still class imbalance — even with reweighting, predicting default is hard.
+
+### <span style="color: #ffd200;">🔭 What Could Be Done Next</span>
+
+- Try time-series models to predict default earlier in the loan cycle.
+- Test the model on more recent data or on another P2P platform.
+- Study if the models show bias (e.g., by demographic).
+
+---
+
+## <span style="color: #ffd200;">👥 Meet the Team</span>
 
 <!-- markdownlint-disable MD033 -->
 <div align="center">
@@ -220,38 +350,9 @@ Key Features:
 </div>
 <!-- markdownlint-enable MD033 -->
 
-## 🔍 Research Focus
+---
 
-Our project explores the intersection of behavioral finance and machine
-learning, with a focus on peer-to-peer (P2P) credit risk prediction. We aim to:
-
-- Identify key borrower and loan features linked to default outcomes
-- Build predictive models using Lending Club loan performance data
-- Analyze behavioral and demographic traits influencing credit risk
-- Apply feature importance tools to surface critical default indicators
-- Support fairer, data-driven credit assessment in alternative lending
-
-## 🛠️ Technical Stack
-
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
-[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
-[![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white)](https://matplotlib.org)
-
-## 📁 Project Structure
-
-Our repository is organized into key sections:
-
-- `/0_domain_study/` - Financial domain research and background
-- `/1_datasets/` - Financial datasets and market data
-- `/2_data_preparation/` - Data cleaning and preprocessing scripts
-- `/3_data_exploration/` - Initial data analysis and visualization
-- `/4_data_analysis/` - Advanced analysis and modeling
-- `/5_communication_strategy/` - How we share our findings
-- `/6_final_presentation/` - Final project presentation
-
-## 🚀 Getting Started
+## <span style="color: #ffd200;">🚀 Getting Started</span>
 
 1. Clone and setup
 
@@ -278,95 +379,14 @@ Our repository is organized into key sections:
 Navigate to the `4_data_analysis` directory to begin exploring our financial
 data analysis.
 
-## 📈 Project Progress
-
-[![Progress](https://img.shields.io/badge/Progress-80%25-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
-
-## 📈 Key Findings
-
-Our analysis of the Lending Club dataset reveals significant predictors of loan
-default. By employing a suite of machine learning models, we've identified key
-financial and behavioral traits that signal heightened credit risk.
-
-### Model Performance
-
-We trained and evaluated three classification models to predict loan default.
-The models were optimized to handle class imbalance, ensuring that the minority
-class (defaulted loans) was given appropriate weight. XGBoost emerged as the
-top-performing model, demonstrating the best balance of precision and recall.
-
-| Model               | ROC | Prec (Def) | Rec (Def) | F1 (Def) |
-|---------------------|:---:|:----------:|:---------:|:--------:|
-| **XGBoost**         |.72  |   0.32     |   0.67    |  0.44    |
-| Logistic Regression |.71  |   0.31     |   0.67    |  0.43    |
-| Random Forest       |.71  |   0.55     |   0.06    |  0.10    |
-
-_Performance metrics are reported on the test set._
-
-### Key Predictors of Default
-
-Feature importance analysis using both Random Forest and XGBoost, complemented
-by SHAP (SHapley Additive exPlanations) values from the XGBoost model,
-highlighted several critical factors in predicting loan defaults. The most
-influential features include:
-
-- **Interest Rate (`int_rate`):** Higher interest rates are strongly correlated
-  with a higher probability of default. This is often the most significant
-  predictor.
-- **Loan Grade and Sub-Grade:** The assigned loan grade (A-G) by the platform is
-  a powerful indicator of risk, with lower grades showing much higher default
-  rates.
-- **FICO Score (`fico_score`):** As expected, lower FICO scores are a primary
-  indicator of credit risk.
-- **Debt-to-Income Ratio (`dti`):** Borrowers with a higher percentage of their
-  income going towards debt payments are more likely to default.
-- **Annual Income (`annual_inc`):** Lower annual income is associated with a
-  higher risk of default.
-- **Loan Amount (`loan_amnt`):** Larger loan amounts can represent a higher
-  risk.
-
-### Visualizing Risk Factors
-
-To better understand the model's decisions, we used SHAP summary plots. These
-visualizations show the impact of each feature on the prediction for individual
-loans. For example, a high interest rate pushes the prediction towards default,
-while a high FICO score pushes it towards repayment.
-
-This provides a transparent view into our model, allowing for interpretable,
-data-driven lending decisions. Our findings can help investors and platforms
-better assess risk and improve outcomes in the P2P lending market.
-
-![SHAP Summary Plot](4_data_analysis/figures/shap_summary_plot.png)
-
-_The SHAP summary plot above shows the impact of the top features on the model's
-output. Each point represents a single loan from the test set. The color
-indicates the feature's value (red is high, blue is low), and the position on
-the x-axis shows the feature's impact on the default prediction._
-
 ---
 
-### ⚠️ Limitations
-
-- The data is from 2007–2018, so a lot has changed since then (especially after COVID).
-- There’s still class imbalance — even with reweighting, predicting default is hard.
-
----
-
-### 🔭 What Could Be Done Next
-
-- Try time-series models to predict default earlier in the loan cycle.
-- Test the model on more recent data or on another P2P platform.
-- Study if the models show bias (e.g., by demographic).
-- Build a web tool or dashboard for lenders to test real loans.
-
----
-
-## 🤝 Contributing
+## <span style="color: #ffd200;">🤝 Contributing</span>
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for
 guidelines.
 
-## 📝 License
+## <span style="color: #ffd200;">📝 License</span>
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 for details.
@@ -375,7 +395,7 @@ for details.
 
 [![Quote](https://img.shields.io/badge/Quote-Finance%20%26%20Data-blue?style=for-the-badge)](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo)
 
-> _"The goal is to turn data into information, and information into insight." -
-> Carly Fiorina_
+> *"The goal is to turn data into information, and information into insight." -
+> Carly Fiorina*
 
 Join us as we make sense — and DataCents — out of information.
