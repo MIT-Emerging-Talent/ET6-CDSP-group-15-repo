@@ -352,7 +352,9 @@ Our repository is organized into key sections:
 
 ---
 
+<!-- markdownlint-disable MD033 -->
 ## <span style="color: #ffd200;">🚀 Getting Started</span>
+<!-- markdownlint-enable MD033 -->
 
 1. Clone and setup
 
@@ -381,12 +383,16 @@ data analysis.
 
 ---
 
+<!-- markdownlint-disable MD033 -->
 ## <span style="color: #ffd200;">🤝 Contributing</span>
+<!-- markdownlint-enable MD033 -->
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for
 guidelines.
 
+<!-- markdownlint-disable MD033 -->
 ## <span style="color: #ffd200;">📝 License</span>
+<!-- markdownlint-enable MD033 -->
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 for details.
