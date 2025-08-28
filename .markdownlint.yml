@@ -1,3 +1,9 @@
 ignore:
   - venv
   - .github
+
+# Disable line length rule (MD013) - allows lines longer than 80 characters
+MD013: false
+
+# Disable no-inline-html rule (MD033) - allows HTML elements in markdown
+MD033: false
