@@ -212,6 +212,8 @@ To share our insights with regulators and researchers, we built the **DataCents 
 
 [**🚀 Try the DataCents Dashboard**](https://datacents2.vercel.app/)
 
+🎤 **Final Presentation**: [View our presentation on Canva](https://www.canva.com/design/DAGwtzrspqc/Bi-81IuO_PaoizWjurkDOw/edit)
+
 📋 **For detailed communication strategy documentation, visit** [`/5_communication_strategy/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/5_communication_strategy)
 
 ---
