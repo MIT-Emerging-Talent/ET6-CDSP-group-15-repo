@@ -8,12 +8,6 @@
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=40&pause=1000&color=ffd200&center=true&vCenter=true&width=600&height=100&lines=Welcome+to+DataCents!;Where+Data+Meets+Finance)
 
-## <span style="color: #ffd200;">🎤 Final Presentation</span>
-
-[**View our presentation on Canva**](https://www.canva.com/design/DAGwtzrspqc/Bi-81IuO_PaoizWjurkDOw/edit)
-
----
-
 ## <span style="color: #ffd200;"> 🔍 Main Findings</span>
 
 After exploring millions of loan records from Lending Club, we found that people
@@ -217,6 +211,8 @@ To share our insights with regulators and researchers, we built the **DataCents 
 - **User-Friendly Interface**: Accessible design for all stakeholders
 
 [**🚀 Try the DataCents Dashboard**](https://datacents2.vercel.app/)
+
+🎤 **Final Presentation**: [View our presentation on Canva](https://www.canva.com/design/DAGwtzrspqc/Bi-81IuO_PaoizWjurkDOw/edit)
 
 📋 **For detailed communication strategy documentation, visit** [`/5_communication_strategy/`](https://github.com/MIT-Emerging-Talent/ET6-CDSP-group-15-repo/tree/main/5_communication_strategy)
 
